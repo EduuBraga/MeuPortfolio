@@ -16,50 +16,59 @@ export function Skills() {
     <Container>
       <h1>Essas são as Skills de Eduardo</h1>
       <ContainerTop>
-        <div>
-          <img src={LogoHTMLImgUrl} alt="Logo HTML5" />
-          <p>HTML5</p>
-        </div>
-        <div>
-          <img src={LogoCSSImgUrl} alt="Logo CSS3" />
-          <p>CSS3</p>
-        </div>
-        <div>
-          <img src={LogoJavascriptImgUrl} alt="Logo JavaScript" />
-          <p>JavaScript</p>
-        </div>
-        <div>
-          <img src={LogoFigmaImgUrl} alt="Logo Figma" />
-          <p>Figma</p>
-        </div>
-        <div>
-          <img src={LogoReactImgUrl} alt="Logo ReactJS" />
-          <p>ReactJS</p>
-        </div>
-        <div>
-          <img src={LogoGitImgUrl} alt="Logo Git" />
-          <p>Git/GitHub</p>
-        </div>
-        <div>
-          <img src={LogoBootstrapImgUrl} alt="Logo Bootstrap" />
-          <p>Bootstrap</p>
-        </div>
-        <div>
-          <img src={LogoVsCodeImgUrl} alt="Logo Visual studio code" />
-          <p>VSCode</p>
-        </div>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">
+          <div>
+            <img src={LogoHTMLImgUrl} alt="Logo HTML5" />
+            <p>HTML5</p>
+          </div>
+        </a>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
+          <div>
+            <img src={LogoCSSImgUrl} alt="Logo CSS3" />
+            <p>CSS3</p>
+          </div>
+        </a>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
+          <div>
+            <img src={LogoJavascriptImgUrl} alt="Logo JavaScript" />
+            <p>JavaScript</p>
+          </div>
+        </a>
+        <a href="https://www.figma.com/" target="_blank">
+          <div>
+            <img src={LogoFigmaImgUrl} alt="Logo Figma" />
+            <p>Figma</p>
+          </div>
+        </a>
+        <a href="https://reactjs.org/" target="_blank">
+          <div>
+            <img src={LogoReactImgUrl} alt="Logo ReactJS" />
+            <p>ReactJS</p>
+          </div>
+        </a>
+        <a href="https://git-scm.com/" target="_blank">
+          <div>
+            <img src={LogoGitImgUrl} alt="Logo Git" />
+            <p>Git/GitHub</p>
+          </div>
+        </a>
+        <a href="https://getbootstrap.com/" target="_blank">
+          <div>
+            <img src={LogoBootstrapImgUrl} alt="Logo Bootstrap" />
+            <p>Bootstrap</p>
+          </div>
+        </a>
+        <a href="https://code.visualstudio.com/" target="_blank">
+          <div>
+            <img src={LogoVsCodeImgUrl} alt="Logo Visual studio code" />
+            <p>VSCode</p>
+          </div>
+        </a>
 
       </ContainerTop>
       <ContainerBottom>
         <div>
-          <p>Essas são as Principais Tecnologias e Ferramentas que me Auxiliam no Desenvolvimento de Aplicações. Fora estás, tenho Conhecimento nas Áreas de:</p>
-          <ul>
-            <li>Metodologias Ágeis, como Scrum</li>
-            <li>Desing System</li>
-            <li>Styled-Components</li>
-            <li>Redux</li>
-            <li>React-Router-Dom</li>
-          </ul>
+          <p>Essas são as Principais Tecnologias e Ferramentas que me Auxiliam no Desenvolvimento de Aplicações Web. Fora estas, tenho Conhecimento nas Áreas de: Metodologias Ágeis, como Scrum; Desing System; Styled-Components; Redux; React-Router-Dom;</p>
         </div>
       </ContainerBottom>
     </Container>
