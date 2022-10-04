@@ -10,15 +10,26 @@ export const GlobalStyle = createGlobalStyle`
     --color-secondary-main: #020202;
     --color-tertiary-main: #afafaf;
   }
-  
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  outline: none;
 
-  body{
-    background-color: var(--color-main);
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
     color: var(--color-text-main);
   }
 
+  body{
+    background-color: var(--color-main);
+  }
+
+  a{
+    text-decoration: none;
+
+    :hover{
+      text-decoration: underline;
+      color: var(--color-secondary);
+    }
+  }
 `
