@@ -21,9 +21,17 @@ export const ContainerTop = styled.div`
   gap: 20px;
 
   a{
-    :hover, :active{
-      text-decoration: none;
+    text-decoration: none;
+    transition: all 0.5s;
+    border-radius: 8px;
 
+    :hover{
+      transform: scale(1.05) translateY(-5px);  
+      box-shadow: 0px 0px 5px 1px var(--color-main-text);    
+    }
+    :active, :focus{
+      transform: translateY(-5px);
+      box-shadow: 0px 0px 5px 1px var(--color-main-text);    
     }
   }
   
@@ -33,17 +41,12 @@ export const ContainerTop = styled.div`
     align-items: center;
     gap: 20px;
 
+    width: 170px;
     background-color: var(--color-secondary-text);
-    box-shadow: 0px 0px 5px 2px var(--color-secondary);    
     padding: 8px;
     border-radius: 8px;
-    transition: all 0.5s;
     cursor: pointer;
     font-weight: 500;
-
-    :hover{
-      transform: scale(1.05) rotate(-10deg);
-    }
 
     img{
       width: 35px;
