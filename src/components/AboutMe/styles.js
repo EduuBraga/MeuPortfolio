@@ -1,8 +1,10 @@
 import styled from "styled-components"
 
 export const ContainerAbout = styled.section`
+  margin: 0 auto;
+  max-width: 765px;
   margin-top: 150px;
-
+  
   h1{
     font-size: 36px;
     margin-bottom: 10px;

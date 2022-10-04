@@ -37,6 +37,7 @@ export const CardProjects = styled.div`
 
   div:nth-child(1){
     text-align: center;
+
     img{
       width: 100%;
       border-radius: 3px;
@@ -60,6 +61,8 @@ export const CardProjects = styled.div`
       display: flex;
       align-items: center;
       padding: 0px 12px;
+      color: black;
+      text-shadow: 2px 0px 0px #ffffff, -2px 0px 0px #ffffff ,  00px -2px 0px #ffffff, 0px 2px 0px #ffffff;
     }
   }
 `
