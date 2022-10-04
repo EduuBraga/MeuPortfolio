@@ -17,6 +17,7 @@ export function AboutMe() {
           <img src={KeyboardAndCoffeImgURL} alt="Teclado e café" />
         </div>
       </ContainerAboutBottom>
+      <span id="Skills"></span>
     </ContainerAbout>
   )
 }

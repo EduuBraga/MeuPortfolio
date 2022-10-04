@@ -11,6 +11,10 @@ export const GlobalStyle = createGlobalStyle`
     --color-tertiary-text: #afafaf;
   }
 
+  html{
+    scroll-behavior: smooth;
+  }
+
   *{
     margin: 0px;
     padding: 0px;

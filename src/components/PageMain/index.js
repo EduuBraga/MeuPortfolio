@@ -13,8 +13,9 @@ import {  ContainerHome, ContainerHomeTop, ContainerHomeBottom } from "./styles"
 export function PageMain() {
   return (
     <>
+      <span id="Home"></span>
       <Nav />
-      <header>
+      <header >
         <ContainerHome>
           <ContainerHomeTop>
             <div>
@@ -36,6 +37,7 @@ export function PageMain() {
             </div>
           </ContainerHomeBottom>
         </ContainerHome>
+        <span id="AboutMe"></span>
       </header>
 
       <main>

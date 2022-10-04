@@ -9,11 +9,14 @@ export function Nav(){
     <Container>
         <Logo>EB</Logo>
         <NavBar>
-          <a href="">Home</a>
-          <a href="">About me</a>
-          <a href="">Skills</a>
-          <a href="">Contact</a>
+          <a href="#Home">Home</a>
+          <a href="#AboutMe">About me</a>
+          <a href="#Skills">Skills</a>
+          <a href="#Contact">Contact</a>
         </NavBar>
+        <span> </span>
+        <span> </span>
+        <span> </span>
         <div>
           <img src={SettingsImgURL} alt="Configurações do site" />
         </div>
