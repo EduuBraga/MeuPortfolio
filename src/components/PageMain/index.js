@@ -8,7 +8,7 @@ import { ProjectsCarousel } from "../Projects"
 import { Footer } from "../Footer"
 import MySelfImgURL from '../../assets/my-self.png'
 
-import { Container, ContainerHome, ContainerHomeTop, ContainerHomeBottom } from "./styles"
+import {  ContainerHome, ContainerHomeTop, ContainerHomeBottom } from "./styles"
 
 export function PageMain() {
   return (
@@ -30,7 +30,9 @@ export function PageMain() {
             <p>Desenvolvedor Front-End</p>
             <div>
               <ButtonBG>Download CV</ButtonBG>
-              <ButtonNoBG>Entre em contato</ButtonNoBG>
+              <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">
+                <ButtonNoBG>Entre em contato</ButtonNoBG>
+              </a>
             </div>
           </ContainerHomeBottom>
         </ContainerHome>
@@ -41,7 +43,7 @@ export function PageMain() {
         <Skills />
         <ProjectsCarousel />
       </main>
-      
+
       <Footer />
     </>
   )
