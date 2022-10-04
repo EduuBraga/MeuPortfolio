@@ -4,7 +4,7 @@ import { ButtonBG, ButtonNoBG } from "../Button/styles"
 import { Nav } from "../Nav/index"
 import { AboutMe } from "../AboutMe/index"
 import { Skills } from "../Skills/index"
-import { ProjectsCarousel } from "../ProjectsCarousel"
+import { ProjectsCarousel } from "../Projects"
 import { Footer } from "../Footer"
 import MySelfImgURL from '../../assets/my-self.png'
 
@@ -36,11 +36,12 @@ export function PageMain() {
         </ContainerHome>
       </header>
 
-      <Container>
+      <main>
         <AboutMe />
         <Skills />
-      </Container>
-      <ProjectsCarousel />
+        <ProjectsCarousel />
+      </main>
+      
       <Footer />
     </>
   )
