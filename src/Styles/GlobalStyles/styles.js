@@ -6,9 +6,9 @@ export const GlobalStyle = createGlobalStyle`
     --color-secondary: #00ffbd;
     --color-tertiary: #afafaf;
 
-    --color-text-main: #f4f5f5;
-    --color-secondary-main: #020202;
-    --color-tertiary-main: #afafaf;
+    --color-main-text: #f4f5f5;
+    --color-secondary-text: #020202;
+    --color-tertiary-text: #afafaf;
   }
 
   *{
@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     outline: none;
     font-family: 'Montserrat', sans-serif;
-    color: var(--color-text-main);
+    color: var(--color-main-text);
   }
 
   body{

@@ -45,10 +45,16 @@ export const ContainerHomeBottom = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 
   p{
     font-size: 40px;
     letter-spacing: 0.1em;
+  }
+
+  div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
 `

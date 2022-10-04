@@ -1,10 +1,12 @@
 import React from "react"
 
+import { ButtonBG, ButtonNoBG } from "../Button/styles"
 import { Nav } from "../Nav/index"
 import { AboutMe } from "../AboutMe/index"
 import MySelfImgURL from '../../assets/my-self.png'
 
 import { Container, ContainerHome, ContainerHomeTop, ContainerHomeBottom } from "./styles"
+
 
 export function PageMain() {
   return (
@@ -25,8 +27,8 @@ export function PageMain() {
           <ContainerHomeBottom>
             <p>Desenvolvedor Front-End</p>
             <div>
-              <button>Dowload CV</button>
-              <button>Entre em contato</button>
+              <ButtonBG>Download CV</ButtonBG>
+              <ButtonNoBG>Entre em contato</ButtonNoBG>
             </div>
           </ContainerHomeBottom>
         </ContainerHome>
@@ -34,7 +36,7 @@ export function PageMain() {
 
       <Container>
         <AboutMe />
-        
+
 
       </Container>
     </>

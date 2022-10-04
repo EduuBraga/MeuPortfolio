@@ -6,8 +6,8 @@ import { PageMain } from './components/PageMain'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-  <PageMain />
-  <GlobalStyle/>
+    <PageMain />
+    <GlobalStyle />
   </>
 );
 
