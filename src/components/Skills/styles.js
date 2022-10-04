@@ -26,10 +26,12 @@ export const ContainerTop = styled.div`
     border-radius: 8px;
 
     :hover{
+      text-decoration: none;
       transform: scale(1.05) translateY(-5px);  
       box-shadow: 0px 0px 5px 1px var(--color-main-text);    
     }
     :active, :focus{
+      text-decoration: none;
       transform: translateY(-5px);
       box-shadow: 0px 0px 5px 1px var(--color-main-text);    
     }
