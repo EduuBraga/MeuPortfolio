@@ -11,7 +11,7 @@ export const ButtonBG = styled.button`
   cursor: pointer;
   transition: all 0.5s;
 
-  :hover{
+  :hover, :active, :focus{
     background-color: var(--color-main-text);
   }
 `
@@ -27,7 +27,7 @@ export const ButtonNoBG = styled.button`
   cursor: pointer;
   transition: all 0.5s;
 
-  :hover{
+  :hover, :active, :focus{
     background-color: var(--color-main-text);
     color: var(--color-main);
   }

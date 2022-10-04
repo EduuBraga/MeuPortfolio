@@ -32,11 +32,16 @@ export const CardProjects = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content:space-around;
   gap: 10px;
 
   div:nth-child(1){
     text-align: center;
+    transition: all 0.5s;
+
+    :hover{
+      transform: scale(1.025);
+    }
 
     img{
       width: 100%;
