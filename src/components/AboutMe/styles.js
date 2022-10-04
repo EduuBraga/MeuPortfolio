@@ -4,7 +4,7 @@ export const ContainerAbout = styled.section`
   margin: 0 auto;
   max-width: 765px;
   margin-top: 150px;
-  
+
   h1{
     font-size: 36px;
     margin-bottom: 10px;
@@ -20,6 +20,9 @@ export const ContainerAboutBottom = styled.section`
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+  p{
     margin-bottom: 10px;
   }
 
