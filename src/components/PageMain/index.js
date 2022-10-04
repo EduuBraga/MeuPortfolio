@@ -3,16 +3,16 @@ import React from "react"
 import { ButtonBG, ButtonNoBG } from "../Button/styles"
 import { Nav } from "../Nav/index"
 import { AboutMe } from "../AboutMe/index"
+import { Skills } from "../Skills/index"
 import MySelfImgURL from '../../assets/my-self.png'
 
 import { Container, ContainerHome, ContainerHomeTop, ContainerHomeBottom } from "./styles"
 
-
 export function PageMain() {
   return (
     <>
+      <Nav />
       <header>
-        <Nav />
         <ContainerHome>
           <ContainerHomeTop>
             <div>
@@ -36,7 +36,7 @@ export function PageMain() {
 
       <Container>
         <AboutMe />
-
+        <Skills />
 
       </Container>
     </>

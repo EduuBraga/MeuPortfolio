@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-export const Container = styled.section`
+export const Container = styled.main`
   margin: 0 auto;
   max-width: 765px;
 `
 
-export const ContainerHome = styled.main`
+export const ContainerHome = styled.section`
   display: flex;
   flex-direction: column;
   margin-top: 100px;
