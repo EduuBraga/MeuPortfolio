@@ -7,10 +7,10 @@ export const ContainerAbout = styled.section`
 
   h1{
     font-size: 36px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 `
-export const ContainerAboutBottom = styled.section`
+export const ContainerAboutBottom = styled.div`
   display: grid;
   grid-template: auto / 2fr 1fr;
   gap: 20px;
@@ -20,13 +20,23 @@ export const ContainerAboutBottom = styled.section`
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0.1em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   p{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
   }
 
   img{
     width: 250px;
+  }
+`
+
+export const SocialMedia = styled.div`
+  text-align: right;
+
+  img{
+    margin: 10px 7px 0px 7px;
+    width: 38px;
   }
 `
