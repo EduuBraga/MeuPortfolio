@@ -1,8 +1,11 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
+import {ThemeContext} from '../../Provider/ThemesProvider/index'
 
 import KeyboardAndCoffeImgURL from '../../assets/keyboardandcoffe.jpg'
 import LogoLinkedinImgURL from '../../assets/icons/linkedin.png'
 import LogoGitHubImgURL from '../../assets/icons/logo-github.png'
+import LogoLinkedinDarkImgURL from '../../assets/icons/linkedin-dark.png'
+import LogoGitHubDarkImgURL from '../../assets/icons/logo-github-dark.png'
 import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.png'
 import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png'
 
@@ -11,6 +14,8 @@ import { ContainerAbout, ContainerAboutBottom, SocialMedia } from "./styles"
 export function AboutMe() {
   const [soonGitHub, setSoonGitHub] = useState(false)
   const [soonLinkedin, setSoonLinkedin] = useState(false)
+
+  const {theme} = useContext(ThemeContext)
 
   return (
     <ContainerAbout>
@@ -26,7 +31,11 @@ export function AboutMe() {
               {soonGitHub ? (
                 <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
               ) : (
-                <img src={LogoGitHubImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo GitHub" />
+                theme.title == 'dark' ? (
+                  <img src={LogoGitHubImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
+                ) : (
+                  <img src={LogoGitHubDarkImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
+                )
               )}
             </a>
 
@@ -34,7 +43,11 @@ export function AboutMe() {
               {soonLinkedin ? (
                 <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />
               ) : (
-                <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
+                theme.title == 'dark' ? (
+                  <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
+                ) : (
+                  <img src={LogoLinkedinDarkImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
+                )
               )}
             </a>
           </SocialMedia>
