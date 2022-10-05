@@ -1,4 +1,5 @@
 export const ThemeLight = {
+  title: 'light',
   colors:{
     colorText: '#141b1f',
     colorTextSecondary: '#777777',

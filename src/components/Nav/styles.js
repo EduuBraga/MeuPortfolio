@@ -24,9 +24,12 @@ export const Container = styled.nav`
 
 export const Logo = styled.div`
   margin-left: 14px;
+  padding: 5px;
+  border-radius: 5px;
   font-weight: 800;
   font-size: 40px;
   color: ${ ({theme}) => theme.colors.colorBgSecondary};
+  background-color: var(--color-main);
 `
 
 export const NavBar = styled.div`
@@ -71,6 +74,16 @@ export const SwitchSettings = styled.button`
 export const SwitchTheme = styled.div`
   position: absolute;
   left: -50px;
-  bottom: ${({isVisible})=> isVisible === true ? '-1px' : '50px'};
+  bottom: ${({isVisible})=> isVisible === true ? '-1px' : '60px'};
   transition: bottom 1s ease;
+
+  button{
+    cursor: pointer;
+    background-color: #00000000;
+    border: none;
+
+    :active{
+      transform: scale(0.90);
+    }
+  }
 `

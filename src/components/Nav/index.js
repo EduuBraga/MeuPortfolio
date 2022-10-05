@@ -1,5 +1,7 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
+import { ThemeContext } from "../../Provider/ThemesProvider/index"
 
+import SettingsDarkImgURL from '../../assets/icons/settings-dark.png'
 import SettingsImgURL from '../../assets/icons/settings.png'
 import MoonImgURL from '../../assets/icons/moon.png'
 import SunImgURL from '../../assets/icons/sun.png'
@@ -7,9 +9,10 @@ import SunImgURL from '../../assets/icons/sun.png'
 import { Container, Logo, NavBar, ContainerSettings, SwitchTheme, SwitchSettings } from "./styles"
 
 export function Nav() {
-  const [themeVisible, setThemeVisible] = useState(true)
+  const { theme, handleThemes } = useContext(ThemeContext)
+  const [themeVisible, setThemeVisible] = useState(false)
 
-  function handleThemes(){
+  function showThemes() {
     themeVisible === true ? setThemeVisible(false) : setThemeVisible(true)
   }
 
@@ -27,10 +30,22 @@ export function Nav() {
       <span> </span>
       <ContainerSettings>
         <SwitchTheme isVisible={themeVisible}>
-          <img src={SunImgURL} alt="ícone de tema" />
+          <button>
+            {theme.title == 'dark' ? (
+              <img src={SunImgURL} onClick={handleThemes} alt="ícone de tema" />
+            ) : (
+              <img src={MoonImgURL} onClick={handleThemes} alt="ícone de tema" />
+            )}
+          </button>
         </SwitchTheme>
 
-        <SwitchSettings><img src={SettingsImgURL} onClick={handleThemes} alt="Configurações do site" /></SwitchSettings>
+        <SwitchSettings>
+          {theme.title == 'dark' ? (
+            <img src={SettingsImgURL} onClick={showThemes} alt="Configurações do site" />
+          ) : (
+            <img src={SettingsDarkImgURL} onClick={showThemes} alt="Configurações do site" />
+          )}
+        </SwitchSettings>
       </ContainerSettings>
     </Container>
   )

@@ -1,4 +1,5 @@
 export const ThemeDark = {
+  title: 'dark',
   colors:{
     colorText: '#f4f5f5',
     colorTextSecondary: '#afafaf',

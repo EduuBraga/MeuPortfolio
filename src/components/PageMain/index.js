@@ -1,4 +1,6 @@
-import React, { useState } from "react"
+import React, { useContext } from "react"
+import { ThemeProvider } from "styled-components"
+import { ThemeContext } from "../../Provider/ThemesProvider"
 
 import { ButtonBG, ButtonNoBG } from "../Button/styles"
 import { Nav } from "../Nav/index"
@@ -10,54 +12,50 @@ import { Footer } from "../Footer"
 import { GlobalStyle } from "../../Styles/GlobalStyles/styles"
 import MySelfImgURL from '../../assets/my-self.png'
 
-import { ThemeDark } from '../../Styles/Themes/dark'
-import { ThemeLight } from '../../Styles/Themes/light'
-import { ThemeProvider } from 'styled-components'
-
-import {  ContainerHome, ContainerHomeTop, ContainerHomeBottom } from "./styles"
+import { ContainerHome, ContainerHomeTop, ContainerHomeBottom } from "./styles"
 
 export function PageMain() {
-  const [theme, setTheme] = useState(ThemeDark)
+  const {theme} = useContext(ThemeContext)
 
   return (
     <ThemeProvider theme={theme}>
-      <span id="Home"></span>
-      <Nav />
-      
-      <header >
-        <ContainerHome>
-          <ContainerHomeTop>
-            <div>
-              <img src={MySelfImgURL} alt="imagem de eduardo braga" />
-            </div>
-            <div>
-              <p>Eduardo</p>
-              <p>Braga</p>
-            </div>
-          </ContainerHomeTop>
+        <span id="Home"></span>
+        <Nav />
 
-          <ContainerHomeBottom>
-            <p>Desenvolvedor Front-End</p>
-            <div>
-              <ButtonBG>Download CV</ButtonBG>
-              <a href="#Contact" >
-                <ButtonNoBG>Entre em contato</ButtonNoBG>
-              </a>
-            </div>
-          </ContainerHomeBottom>
-        </ContainerHome>
-        <span id="AboutMe"></span>
-      </header>
+        <header >
+          <ContainerHome>
+            <ContainerHomeTop>
+              <div>
+                <img src={MySelfImgURL} alt="imagem de eduardo braga" />
+              </div>
+              <div>
+                <p>Eduardo</p>
+                <p>Braga</p>
+              </div>
+            </ContainerHomeTop>
 
-      <main>
-        <AboutMe />
-        <Skills />
-        <ProjectsCarousel />
-        <Contact></Contact>
-      </main>
+            <ContainerHomeBottom>
+              <p>Desenvolvedor Front-End</p>
+              <div>
+                <ButtonBG>Download CV</ButtonBG>
+                <a href="#Contact" >
+                  <ButtonNoBG>Entre em contato</ButtonNoBG>
+                </a>
+              </div>
+            </ContainerHomeBottom>
+          </ContainerHome>
+          <span id="AboutMe"></span>
+        </header>
 
-      <Footer />
-      <GlobalStyle />
+        <main>
+          <AboutMe />
+          <Skills />
+          <ProjectsCarousel />
+          <Contact></Contact>
+        </main>
+
+        <Footer />
+        <GlobalStyle />
     </ThemeProvider>
   )
 }
