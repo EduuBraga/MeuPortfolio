@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react"
-import {ThemeContext} from '../../Provider/ThemesProvider/index'
+import React, { useContext, useEffect, useState } from "react"
+import { ThemeContext } from '../../Provider/ThemesProvider/index'
 
 import KeyboardAndCoffeImgURL from '../../assets/keyboardandcoffe.jpg'
 import LogoLinkedinImgURL from '../../assets/icons/linkedin.png'
@@ -9,17 +9,35 @@ import LogoGitHubDarkImgURL from '../../assets/icons/logo-github-dark.png'
 import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.png'
 import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png'
 
-import { ContainerAbout, ContainerAboutBottom, SocialMedia } from "./styles"
+import { ContainerAbout, ContainerAboutBottom, SocialMedia, PalavrasSection, Text } from "./styles"
 
 export function AboutMe() {
+  const { theme } = useContext(ThemeContext)
+
   const [soonGitHub, setSoonGitHub] = useState(false)
   const [soonLinkedin, setSoonLinkedin] = useState(false)
+  const [palavra, setPalavra] = useState({ palavra: 'esforçado.' })
 
-  const {theme} = useContext(ThemeContext)
+  const palavras = [
+    'esforçado.',
+    'Otimista.',
+    'Criativo.',
+    'positivo.',
+  ]
+
+  useEffect(() => {
+    let indexPalavras = 1
+    setInterval(() => {
+      setPalavra({ palavra: palavras[indexPalavras] })
+      if (++indexPalavras === palavras.length) {
+        indexPalavras = 0
+      }
+    }, 4000);
+  }, [])
 
   return (
     <ContainerAbout>
-      <h1>Eduardo é um desenvolvedor esforçado.</h1>
+      <h1>Eduardo é um desenvolvedor <PalavrasSection><Text>{palavra.palavra}</Text></PalavrasSection></h1>
       <ContainerAboutBottom>
         <div>
           <p>Olá 👋</p>
