@@ -67,9 +67,7 @@ export function Skills() {
 
       </ContainerTop>
       <ContainerBottom>
-        <div>
-          <p>Essas são as Principais Tecnologias e Ferramentas que me Auxiliam no Desenvolvimento de Aplicações Web. Fora estas, tenho Conhecimento nas Áreas de: Metodologias Ágeis, como Scrum; Desing System; Styled-Components; Redux; React-Router-Dom;</p>
-        </div>
+        <p>Essas são as Principais Tecnologias e Ferramentas que me Auxiliam no Desenvolvimento de Aplicações Web. Fora estas, tenho Conhecimento nas Áreas de: Metodologias Ágeis, como Scrum; Desing System; Styled-Components; Redux; React-Router-Dom;</p>
       </ContainerBottom>
     </Container>
   )

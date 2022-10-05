@@ -57,13 +57,5 @@ export const ContainerTop = styled.div`
 `
 
 export const ContainerBottom = styled.div`
-  div{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    ul{
-      padding-left: 20px;
-    }
-  }
+  font-size: 18px;
 `
