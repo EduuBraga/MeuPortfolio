@@ -32,7 +32,7 @@ export function PageMain() {
             <p>Desenvolvedor Front-End</p>
             <div>
               <ButtonBG>Download CV</ButtonBG>
-              <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">
+              <a href="#Contact" target="_blank">
                 <ButtonNoBG>Entre em contato</ButtonNoBG>
               </a>
             </div>
