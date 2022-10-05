@@ -5,6 +5,7 @@ import { Nav } from "../Nav/index"
 import { AboutMe } from "../AboutMe/index"
 import { Skills } from "../Skills/index"
 import { ProjectsCarousel } from "../Projects"
+import { Contact } from "../Contact"
 import { Footer } from "../Footer"
 import MySelfImgURL from '../../assets/my-self.png'
 
@@ -44,6 +45,7 @@ export function PageMain() {
         <AboutMe />
         <Skills />
         <ProjectsCarousel />
+        <Contact></Contact>
       </main>
 
       <Footer />
