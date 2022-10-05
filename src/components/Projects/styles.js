@@ -49,6 +49,10 @@ export const CardProjects = styled.div`
     }
   }
 
+  h3{
+    color: white;
+  }
+
   p{
     color: var(--color-tertiary-text);
     font-size: 13px;
@@ -67,7 +71,7 @@ export const CardProjects = styled.div`
       align-items: center;
       padding: 0px 12px;
       color: black;
-      text-shadow: 2px 0px 0px #ffffff, -2px 0px 0px #ffffff ,  00px -2px 0px #ffffff, 0px 2px 0px #ffffff;
+      text-shadow: 2px 0px 0px  #ffffff, -2px 0px 0px #ffffff ,  00px -2px 0px #ffffff, 0px 2px 0px #ffffff;
     }
   }
 `

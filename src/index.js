@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { GlobalStyle } from './Styles/GlobalStyles/styles';
 import { PageMain } from './components/PageMain'
+import { ThemesProvider } from "./Provider/ThemesProvider/index"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <PageMain />
-    <GlobalStyle />
+    <ThemesProvider>
+      <PageMain />
+    </ThemesProvider>
   </>
 );
 

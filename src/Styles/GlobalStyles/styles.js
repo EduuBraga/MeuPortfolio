@@ -21,11 +21,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     outline: none;
     font-family: 'Montserrat', sans-serif;
-    color: var(--color-main-text);
+    color:  ${ ({ theme }) => theme.colors.colorText};
   }
 
   body{
-    background-color: var(--color-main);
+    background-color: ${ ({ theme }) => theme.colors.colorBg};
   }
 
   a{

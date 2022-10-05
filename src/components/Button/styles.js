@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
 export const ButtonBG = styled.button`
-  background-color: var(--color-secondary);
+  background-color: ${ ({ theme }) => theme.colors.colorBgSecondary};
   font-weight: 500;
-  color: var(--color-main);
+  color: ${ ({ theme }) => theme.colors.colorText};
   border: none;
   font-size: 18px;
   padding: 11px 16px;
@@ -12,15 +12,16 @@ export const ButtonBG = styled.button`
   transition: all 0.5s;
 
   :hover, :active, :focus{
-    background-color: var(--color-main-text);
+    background-color: ${ ({ theme }) => theme.colors.colorText};
+    color: ${ ({ theme }) => theme.colors.colorBg};
   }
 `
 
 export const ButtonNoBG = styled.button`
   background-color: #00000000;
   font-weight: 500;
-  color: var(--color-secondary);
-  border: 1px solid var(--color-secondary);
+  color: ${ ({ theme }) => theme.colors.colorText};
+  border: 1px solid ${ ({ theme }) => theme.colors.colorText};
   font-size: 18px;
   padding: 10px 15px;
   border-radius: 10px;
@@ -28,7 +29,8 @@ export const ButtonNoBG = styled.button`
   transition: all 0.5s;
 
   :hover, :active, :focus{
-    background-color: var(--color-main-text);
-    color: var(--color-main);
+    border: 1px solid black;
+    background-color: white;
+    color:  black;
   }
 `

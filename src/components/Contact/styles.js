@@ -30,7 +30,10 @@ export const CardContainerContactBottom = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
+  width: 200px;
+  height: 140px;
 
   background-color: var(--color-secondary-text);
   padding: 15px 5px;
@@ -38,18 +41,26 @@ export const CardContainerContactBottom = styled.div`
   transition: all 0.5s;
   box-sizing: content-box;
 
-  :hover{
-    background-color: #00000000;
-    box-shadow: 0px 0px 5px 1px var(--color-tertiary-text);
+  h4{
+    color: white;
   }
 
   p{
     color: var(--color-tertiary-text);
     font-size: 14px;
+    padding: 0px 7px;
+    overflow-wrap: break-word;  
+    word-wrap: break-word; 
+    word-break: break-word;
   }
 
   a{
-    color: var(--color-secondary);
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: var(--color-secondary);
+    :hover, :focus, :active{
+      color: var(--color-secondary);
+    }
   }
 
   img{

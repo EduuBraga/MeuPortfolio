@@ -18,7 +18,7 @@ export const Container = styled.section`
 export const ContainerTop = styled.div`
   display: grid;
   grid-template: auto auto / auto auto auto auto;
-  gap: 20px;
+  gap: 20px;  
 
   a{
     text-decoration: none;
@@ -28,15 +28,19 @@ export const ContainerTop = styled.div`
     :hover{
       text-decoration: none;
       transform: scale(1.05) translateY(-5px);  
-      box-shadow: 0px 0px 5px 1px var(--color-main-text);    
+      box-shadow: 0px 0px 5px 1px ${ ({ theme }) => theme.colors.colorText};    
     }
     :active, :focus{
       text-decoration: none;
       transform: translateY(-5px);
-      box-shadow: 0px 0px 5px 1px var(--color-main-text);    
+      box-shadow: 0px 0px 5px 1px ${ ({ theme }) => theme.colors.colorText};    
+    }
+
+    p{
+      color: white;
     }
   }
-  
+
   div{
     display: flex;
     justify-content: space-around;
@@ -44,7 +48,7 @@ export const ContainerTop = styled.div`
     gap: 20px;
 
     width: 170px;
-    background-color: var(--color-secondary-text);
+    background-color: black;
     padding: 8px;
     border-radius: 8px;
     cursor: pointer;

@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 export const Container = styled.nav`
   z-index: 10;
-  background-color: #141b1f95;
+  background-color: ${ ({ theme }) => theme.colors.colorBgBlur};
   backdrop-filter: blur(5px);
   position: sticky;
   top: 0;
@@ -26,20 +26,51 @@ export const Logo = styled.div`
   margin-left: 14px;
   font-weight: 800;
   font-size: 40px;
-  color: var(--color-secondary);
+  color: ${ ({theme}) => theme.colors.colorBgSecondary};
 `
 
 export const NavBar = styled.div`
   display: flex; 
-  gap: 30px;
+  gap: 20px;
 
   a{
+    font-size: 18px;
     font-weight: 700;
-    color:var(--color-tertiary);
+    color:${ ({theme}) => theme.colors.colorTextSecondary};
 
     :hover{
       text-decoration: underline;
-      color: var(--color-secondary);
+      color: ${ ({theme}) => theme.colors.colorBgSecondary};
     }
   }
+`
+
+export const ContainerSettings = styled.div`
+  position: relative;
+  display: flex;
+  gap: 10px;
+
+`
+
+
+
+export const SwitchSettings = styled.button`
+  background-color: #00000000;
+  border: none;
+
+  :active{
+    transform: scale(0.90);
+  }
+
+  img{
+    z-index: 5;
+    cursor: pointer;
+  }
+`
+
+export const SwitchTheme = styled.div`
+  position: absolute;
+  left: -50px;
+  bottom: ${({isVisible})=> isVisible === true ? '-1px' : '50px'};
+  transition: bottom 1s ease;
 `
