@@ -15,7 +15,7 @@ export function Footer() {
   const [iconEmail, setIconEmail] = useState(false)
 
   return (
-    <Container id="Contact">
+    <Container>
       <div>
         <a href="https://github.com/EduuBraga" target="_blank">
           {soonGitHub ? (

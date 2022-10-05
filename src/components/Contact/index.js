@@ -7,7 +7,7 @@ import { Container, ContainerContactTop, ContainerContactBottom, CardContainerCo
 
 export function Contact(){
   return(
-    <Container>
+    <Container  id="Contact">
       <ContainerContactTop>
         <h1>Entre em Contato Com Eduardo</h1>
         <p>Caso tenha interesse em mim, me encaminhe um E-mail ou me chame no Linkedin. Responderei o quanto antes.</p>
