@@ -24,7 +24,7 @@ export function Footer() {
     <Container>
       <Content>
         <SocialMidia>
-          <a href="https://github.com/EduuBraga" target="_blank">
+          <a href="https://github.com/EduuBraga" target="_blank" rel="noreferrer">
             {soonGitHub ? (
               <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
             ) : (
@@ -36,7 +36,7 @@ export function Footer() {
             )
             }
           </a>
-          <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">
+          <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank" rel="noreferrer">
             {soonLinkedin ? (
               <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />
             ) : (
@@ -47,7 +47,7 @@ export function Footer() {
               )
             )}
           </a>
-          <a href="mailto:chocolate.blindado123@gmail.com" target="_blank">
+          <a href="mailto:chocolate.blindado123@gmail.com" target="_blank" rel="noreferrer">
             {iconEmail ? (
               <img src={EmailImgsecondaryURL} onMouseOut={() => { setIconEmail(false) }} alt="E-mail" />
             ) : (

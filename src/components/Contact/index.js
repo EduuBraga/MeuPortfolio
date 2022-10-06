@@ -19,7 +19,7 @@ export function Contact(){
           </div>
           <h4>E-mail</h4>
           <p>chocolate.blindado123@gmail.com</p>
-          <a href="mailto:chocolate.blindado123@gmail.com" target="_blank">Me mande um e-mail</a>
+          <a href="mailto:chocolate.blindado123@gmail.com" target="_blank" rel="noreferrer">Me mande um e-mail</a>
         </CardContainerContactBottom>
         <CardContainerContactBottom>
           <div>
@@ -27,7 +27,7 @@ export function Contact(){
           </div>
           <h4>Linkedin</h4>
           <p>Eduardo Braga</p>
-          <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">Me mande um Olá</a>
+          <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank" rel="noreferrer">Me mande um Olá</a>
         </CardContainerContactBottom>
       </ContainerContactBottom>
     </Container>

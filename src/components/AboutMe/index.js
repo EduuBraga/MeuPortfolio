@@ -33,7 +33,7 @@ export function AboutMe() {
         indexPalavras = 0
       }
     }, 4000);
-  }, [])
+  }, [palavra])
 
   return (
     <ContainerAbout>
@@ -45,11 +45,11 @@ export function AboutMe() {
           <p>Adoro criar coisas, por este motivo o universo Front-End me pegou de jeito - esse danadinho. Fazer e refazer estilos é uma das coisas que eu mais gosto, pois não tenho dificuldades em da um passo atrás, pra dar dois à frente.</p>
           <p>Desde que decide me dedicar dia após dia a programação, só tive a certeza de que sim! é isso que eu quero pra minha vida. Com isso em mente venho evoluindo minhas habilidades como desenvolvedor, sempre disposto a aprender coisas novas e buscar resoluções de problemas.</p>
           <SocialMedia>
-            <a href="https://github.com/EduuBraga" target="_blank">
+            <a href="https://github.com/EduuBraga" target="_blank" rel="noreferrer">
               {soonGitHub ? (
                 <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
               ) : (
-                theme.title == 'dark' ? (
+                theme.title === 'dark' ? (
                   <img src={LogoGitHubImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
                 ) : (
                   <img src={LogoGitHubDarkImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
@@ -57,7 +57,7 @@ export function AboutMe() {
               )}
             </a>
 
-            <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">
+            <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank" rel="noreferrer">
               {soonLinkedin ? (
                 <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />
               ) : (
@@ -73,7 +73,7 @@ export function AboutMe() {
         <CardImgsAndSocial>
           <ImgCoffe src={KeyboardAndCoffeImgURL} alt="Teclado e café" />
           <SocialMedia768>
-            <a href="https://github.com/EduuBraga" target="_blank">
+            <a href="https://github.com/EduuBraga" target="_blank" rel="noreferrer">
               {soonGitHub ? (
                 <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
               ) : (
@@ -85,7 +85,7 @@ export function AboutMe() {
               )}
             </a>
 
-            <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">
+            <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank" rel="noreferrer">
               {soonLinkedin ? ( <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />) 
               : ( theme.title === 'dark' ? ( <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" /> ) 
               : ( <img src={LogoLinkedinDarkImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" /> ))}
