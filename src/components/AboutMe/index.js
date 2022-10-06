@@ -33,7 +33,7 @@ export function AboutMe() {
         indexPalavras = 0
       }
     }, 4000);
-  }, [palavra])
+  }, [])
 
   return (
     <ContainerAbout>
