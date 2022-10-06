@@ -25,12 +25,11 @@ export function Nav() {
     <Container>
       {menuVisible && <ContainerMenu>
         <ButtonClose onClick={() => { setMenuVisible(false) }}>
-         
           {theme.title === 'dark' ? (
-         <img src={CloseImgURL} alt="Fechar menu" />
-      ) : (
-        <img src={CloseDarkImgURL} alt="Fechar menu" />
-      )}
+            <img src={CloseImgURL} alt="Fechar menu" />
+          ) : (
+            <img src={CloseDarkImgURL} alt="Fechar menu" />
+          )}
         </ButtonClose>
         <nav>
           <a href="#Home">Home</a>

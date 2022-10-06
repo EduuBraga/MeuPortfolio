@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 export const Container = styled.nav`
   z-index: 10;
@@ -97,20 +97,29 @@ export const SwitchTheme = styled.div`
   }
 `
 
+const ShowMenu = keyframes`
+  0%{
+    left: -220px;
+  }100%{
+    left: 0;
+  }
+`
+
 export const ContainerMenu = styled.div`
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   height: 100vh;
-  width: 180px;
+  width: 220px;
 
+  animation: ${ShowMenu} 1s ease;
   background-color: ${ ({ theme }) => theme.colors.colorBg};
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow:${ ({ theme }) => theme.title === 'dark' ? '-5px 0px 15px black inset' : '-5px 0px 15px var(--color-tertiary) inset'};
+  box-shadow:${ ({ theme }) => theme.title === 'dark' ? '-5px 0px 15px #00000080 inset' : '-5px 0px 15px var(--color-tertiary) inset'};
 
   nav{
     display: flex;
@@ -137,6 +146,7 @@ export const ContainerMenu = styled.div`
     button{
       background-color: #00000000;
       border: none;
+      cursor: pointer;
 
       :active{
         transform: scale(0.90);
@@ -151,6 +161,7 @@ export const ContainerMenu = styled.div`
 export const IconMenu = styled.img`
   width: 30px;
   margin: 10px;
+  cursor: pointer;
 
   @media screen and (min-width:  769px){
     display: none;
@@ -158,18 +169,18 @@ export const IconMenu = styled.img`
 `
 
 export const ButtonClose = styled.button`
-   position: absolute;
-    right: 8px;
-    top: 8px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background-color: #00000000;
+  border: none;
+  cursor: pointer;
 
-    background-color: #00000000;
-    border: none;
+  :active{
+    transform: scale(0.90);
+  }
 
-    :active{
-      transform: scale(0.90);
-    }
-
-    img{
-      width: 20px;
-    }
+  img{
+    width: 20px;
+  }
 `
