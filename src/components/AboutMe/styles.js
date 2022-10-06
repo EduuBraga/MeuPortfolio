@@ -4,10 +4,15 @@ export const ContainerAbout = styled.section`
   margin: 0 auto;
   max-width: 765px;
   margin-top: 150px;
+  padding: 15px;
 
   h1{
     font-size: 36px;
     margin-bottom: 15px;
+
+    @media screen and (max-width:  768px){
+      font-size:28px ;
+    }
   }
 `
 
@@ -57,6 +62,10 @@ export const ContainerAboutBottom = styled.div`
   grid-template: auto / 2fr 1fr;
   gap: 20px;
 
+  @media screen and (max-width:  768px){
+    grid-template: auto auto / auto;
+  }
+
   p:nth-child(1){
     font-size: 20px;
     font-style: normal;
@@ -67,10 +76,22 @@ export const ContainerAboutBottom = styled.div`
   p{
     margin-bottom: 15px;
     font-size: 18px;
+    z-index: 5;
   }
 
-  img{
+
+`
+
+export const CardImgsAndSocial = styled.div`
+  img:nth-child(1){
     width: 250px;
+  }
+
+  @media screen and (max-width:  768px){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 `
 
@@ -80,5 +101,22 @@ export const SocialMedia = styled.div`
   img{
     margin: 10px 7px 0px 7px;
     width: 38px;
+    
+  }
+  @media screen and (max-width:  768px){
+    display: none;
+  }
+`
+
+export const SocialMedia768 = styled.div`
+  display: flex;
+  gap: 20px;
+
+  @media screen and (min-width:  769px){
+    display: none;
+  }
+  
+  img{
+    max-width: 50px;
   }
 `

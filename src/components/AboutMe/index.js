@@ -9,7 +9,7 @@ import LogoGitHubDarkImgURL from '../../assets/icons/logo-github-dark.png'
 import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.png'
 import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png'
 
-import { ContainerAbout, ContainerAboutBottom, SocialMedia, PalavrasSection, Text } from "./styles"
+import { ContainerAbout, ContainerAboutBottom, CardImgsAndSocial, SocialMedia, SocialMedia768, PalavrasSection, Text } from "./styles"
 
 export function AboutMe() {
   const { theme } = useContext(ThemeContext)
@@ -70,9 +70,28 @@ export function AboutMe() {
             </a>
           </SocialMedia>
         </div>
-        <div>
+        <CardImgsAndSocial>
           <img src={KeyboardAndCoffeImgURL} alt="Teclado e café" />
-        </div>
+          <SocialMedia768>
+            <a href="https://github.com/EduuBraga" target="_blank">
+              {soonGitHub ? (
+                <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
+              ) : (
+                theme.title == 'dark' ? (
+                  <img src={LogoGitHubImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
+                ) : (
+                  <img src={LogoGitHubDarkImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
+                )
+              )}
+            </a>
+
+            <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">
+              {soonLinkedin ? ( <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />) 
+              : ( theme.title == 'dark' ? ( <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" /> ) 
+              : ( <img src={LogoLinkedinDarkImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" /> ))}
+            </a>
+          </SocialMedia768>
+        </CardImgsAndSocial>
       </ContainerAboutBottom>
       <span id="Skills"></span>
     </ContainerAbout>

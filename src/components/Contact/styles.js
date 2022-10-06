@@ -4,6 +4,7 @@ export const Container = styled.section`
   max-width: 768px;
   margin: auto;
   margin-bottom: 100px;
+  padding: 15px;
 `
 
 export const ContainerContactTop = styled.div`

@@ -4,14 +4,23 @@ export const Container = styled.section`
   margin: 0 auto;
   max-width: 765px;
   margin-top: 150px;
+  padding: 15px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 
+  @media screen and (max-width:  768px){
+    margin-top: 100px;
+  }
+
   h1{
     font-size: 36px;
+
+    @media screen and (max-width:  768px){
+      font-size: 28px;
+    }
   }
 `
 
@@ -19,6 +28,10 @@ export const ContainerTop = styled.div`
   display: grid;
   grid-template: auto auto / auto auto auto auto;
   gap: 20px;  
+
+  @media screen and (max-width:  768px){
+    grid-template: auto auto auto auto / auto auto;
+  }
 
   a{
     text-decoration: none;

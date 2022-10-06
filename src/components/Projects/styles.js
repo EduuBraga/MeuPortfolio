@@ -6,10 +6,18 @@ export const Container = styled.section`
   margin-top: 150px;
   margin-bottom: 150px;
 
+  @media screen and (max-width:  768px){
+    margin-bottom: 100px;
+  }
+
   h1{
     font-size: 36px;
     text-align: center;
     margin-bottom: 15px;
+
+    @media screen and (max-width:  768px){
+      font-size: 28px;
+    }
   }
 `
 
@@ -20,6 +28,10 @@ export const Content = styled.div`
   padding:0px 100px 0px 100px ;
   gap: 10px;
   overflow-x: scroll;
+
+  @media screen and (max-width:  768px){
+    padding:0px 10px 0px 10px ;
+  }
 `
 
 export const CardProjects = styled.div`

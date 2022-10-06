@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const ButtonBG = styled.button`
   background-color: ${ ({ theme }) => theme.colors.colorBgSecondary};
   font-weight: 500;
-  color: ${ ({ theme }) => theme.colors.colorText};
+  color: var(--color-main);
   border: none;
   font-size: 18px;
   padding: 11px 16px;
