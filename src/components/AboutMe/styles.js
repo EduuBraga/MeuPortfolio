@@ -7,7 +7,7 @@ export const ContainerAbout = styled.section`
   padding: 15px;
 
   h1{
-    font-size: 36px;
+    font-size: 35px;
     margin-bottom: 15px;
 
     @media screen and (max-width:  768px){

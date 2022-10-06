@@ -16,13 +16,13 @@ export function AboutMe() {
 
   const [soonGitHub, setSoonGitHub] = useState(false)
   const [soonLinkedin, setSoonLinkedin] = useState(false)
-  const [palavra, setPalavra] = useState({ palavra: 'esforçado.' })
+  const [palavra, setPalavra] = useState({ palavra: 'Disposto.' })
 
   const palavras = [
-    'esforçado.',
-    'Otimista.',
-    'Criativo.',
-    'positivo.',
+    'disposto.',
+    'otimista.',
+    'criativo.',
+    'dedicado.',
   ]
 
   useEffect(() => {
