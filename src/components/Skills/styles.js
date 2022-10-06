@@ -85,7 +85,17 @@ export const ContainerTop = styled.div`
 
 export const ContainerBottom = styled.div`
   font-size: 18px;
+
   @media screen and (max-width: 426px){
     font-size: 16px;
+  }
+  a{
+    text-decoration: underline;
+    text-decoration-color: var(--color-secondary) ;
+    transition: all 0.2s linear;
+
+    :hover{
+      background-color: black;
+    }
   }
 `
