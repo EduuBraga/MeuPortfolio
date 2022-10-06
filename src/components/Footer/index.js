@@ -28,7 +28,7 @@ export function Footer() {
             {soonGitHub ? (
               <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
             ) : (
-              theme.title == 'dark' ? (
+              theme.title === 'dark' ? (
                 <img src={LogoGitHubImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo GitHub" />
               ) : (
                 <img src={LogoGitHubDarkImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo GitHub" />
@@ -40,7 +40,7 @@ export function Footer() {
             {soonLinkedin ? (
               <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />
             ) : (
-              theme.title == 'dark' ? (
+              theme.title === 'dark' ? (
                 <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
               ) : (
                 <img src={LogoLinkedinDarkImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
@@ -51,7 +51,7 @@ export function Footer() {
             {iconEmail ? (
               <img src={EmailImgsecondaryURL} onMouseOut={() => { setIconEmail(false) }} alt="E-mail" />
             ) : (
-              theme.title == 'dark' ? (
+              theme.title === 'dark' ? (
                 <img src={EmailImgURL} onMouseOver={() => { setIconEmail(true) }} alt="E-mail" />
               ) : (
                 <img src={EmailDarkImgURL} onMouseOver={() => { setIconEmail(true) }} alt="E-mail" />

@@ -26,7 +26,7 @@ export function Nav() {
       {menuVisible && <ContainerMenu>
         <ButtonClose onClick={() => { setMenuVisible(false) }}>
          
-          {theme.title == 'dark' ? (
+          {theme.title === 'dark' ? (
          <img src={CloseImgURL} alt="Fechar menu" />
       ) : (
         <img src={CloseDarkImgURL} alt="Fechar menu" />
@@ -40,7 +40,7 @@ export function Nav() {
         </nav>
         <div>
           <button>
-            {theme.title == 'dark' ? (
+            {theme.title === 'dark' ? (
               <img src={SunImgURL} onClick={handleThemes} alt="ícone de tema" />
             ) : (
               <img src={MoonImgURL} onClick={handleThemes} alt="ícone de tema" />
@@ -49,7 +49,7 @@ export function Nav() {
         </div>
       </ContainerMenu>}
 
-      {theme.title == 'dark' ? (
+      {theme.title === 'dark' ? (
         <IconMenu onClick={() => { setMenuVisible(true) }} src={MenuImgURL} alt="Ícone do menu" />
       ) : (
         <IconMenu onClick={() => { setMenuVisible(true) }} src={MenuDarkImgURL} alt="Ícone do menu" />
@@ -71,7 +71,7 @@ export function Nav() {
       <ContainerSettings>
         <SwitchTheme isVisible={themeVisible}>
           <button>
-            {theme.title == 'dark' ? (
+            {theme.title === 'dark' ? (
               <img src={SunImgURL} onClick={handleThemes} alt="ícone de tema" />
             ) : (
               <img src={MoonImgURL} onClick={handleThemes} alt="ícone de tema" />
@@ -80,7 +80,7 @@ export function Nav() {
         </SwitchTheme>
 
         <SwitchSettings>
-          {theme.title == 'dark' ? (
+          {theme.title === 'dark' ? (
             <img src={SettingsImgURL} onClick={showThemes} alt="Configurações do site" />
           ) : (
             <img src={SettingsDarkImgURL} onClick={showThemes} alt="Configurações do site" />

@@ -61,7 +61,7 @@ export function AboutMe() {
               {soonLinkedin ? (
                 <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />
               ) : (
-                theme.title == 'dark' ? (
+                theme.title === 'dark' ? (
                   <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
                 ) : (
                   <img src={LogoLinkedinDarkImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
@@ -77,7 +77,7 @@ export function AboutMe() {
               {soonGitHub ? (
                 <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
               ) : (
-                theme.title == 'dark' ? (
+                theme.title ==='dark' ? (
                   <img src={LogoGitHubImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
                 ) : (
                   <img src={LogoGitHubDarkImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
@@ -87,7 +87,7 @@ export function AboutMe() {
 
             <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">
               {soonLinkedin ? ( <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />) 
-              : ( theme.title == 'dark' ? ( <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" /> ) 
+              : ( theme.title === 'dark' ? ( <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" /> ) 
               : ( <img src={LogoLinkedinDarkImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" /> ))}
             </a>
           </SocialMedia768>
