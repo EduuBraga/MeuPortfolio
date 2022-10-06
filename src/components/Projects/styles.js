@@ -5,6 +5,7 @@ export const Container = styled.section`
   margin: 0 auto;
   margin-top: 150px;
   margin-bottom: 150px;
+  padding: 15px;
 
   @media screen and (max-width:  768px){
     margin-bottom: 100px;
@@ -17,6 +18,9 @@ export const Container = styled.section`
 
     @media screen and (max-width:  768px){
       font-size: 28px;
+    }
+    @media screen and (max-width: 426px){
+      font-size: 24px;
     }
   }
 `

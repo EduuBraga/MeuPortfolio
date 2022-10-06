@@ -9,7 +9,7 @@ export function Contact(){
   return(
     <Container  id="Contact">
       <ContainerContactTop>
-        <h1>Entre em Contato Com Eduardo</h1>
+        <h1>Entre em Contato comigo</h1>
         <p>Caso tenha interesse em mim, me encaminhe um E-mail ou me chame no Linkedin. Responderei o quanto antes.</p>
       </ContainerContactTop>
       <ContainerContactBottom>
@@ -27,7 +27,7 @@ export function Contact(){
           </div>
           <h4>Linkedin</h4>
           <p>Eduardo Braga</p>
-          <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">Me mande um alô</a>
+          <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank">Me mande um Olá</a>
         </CardContainerContactBottom>
       </ContainerContactBottom>
     </Container>

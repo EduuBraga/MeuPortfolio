@@ -20,15 +20,25 @@ export const ContainerHomeTop = styled.div`
   align-items: center;
   margin-bottom: 10px;
   gap: 10px;
+  padding: 10px;
 
   @media screen and (max-width:  768px){
     margin-bottom: 0px;
+  }
+
+  @media screen and (max-width: 426px){
+    flex-direction: column;
+    gap: 0px;
   }
 
   div:nth-child(2){
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @media screen and (max-width: 426px){
+      align-items: center;
+    }
     
     p:nth-child(1){
       font-weight: 800;
@@ -60,11 +70,16 @@ export const ContainerHomeBottom = styled.div`
   gap: 14px;
 
   p{
+    text-align: center;
     font-size: 40px;
     letter-spacing: 0.1em;
 
     @media screen and (max-width:  768px){
         font-size: 28px;
+    }
+    @media screen and (max-width: 426px){
+      flex-direction: column;
+      font-size: 24px;
     }
   }
 
@@ -75,6 +90,10 @@ export const ContainerHomeBottom = styled.div`
 
     @media screen and (max-width:  768px){
       gap: 20px;    
+    }
+    @media screen and (max-width: 426px){
+      flex-direction: column;
+      gap: 5px;
     }
   }
 `

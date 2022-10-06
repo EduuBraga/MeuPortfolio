@@ -13,6 +13,9 @@ export const ContainerAbout = styled.section`
     @media screen and (max-width:  768px){
       font-size:28px ;
     }
+    @media screen and (max-width: 426px){
+      font-size: 24px;
+    }
   }
 `
 
@@ -37,6 +40,9 @@ export const PalavrasSection = styled.div`
   overflow: hidden;
   position: relative;
   transform: translateY(10px);
+  @media screen and (max-width: 426px){
+    transform: translateY(5px);
+  }
 
   ::after{
     content: '';
@@ -72,21 +78,29 @@ export const ContainerAboutBottom = styled.div`
     font-weight: 800;
     letter-spacing: 0.1em;
     margin-bottom: 15px;
+    @media screen and (max-width: 426px){
+      font-size: 18px;
+    }
   }
   p{
     margin-bottom: 15px;
     font-size: 18px;
     z-index: 5;
+    @media screen and (max-width: 426px){
+      font-size: 16px;
+    }
   }
+`
 
+export const ImgCoffe = styled.img`
+  width: 250px;
 
+  @media screen and (max-width: 426px){
+    display: none;
+  }
 `
 
 export const CardImgsAndSocial = styled.div`
-  img:nth-child(1){
-    width: 250px;
-  }
-
   @media screen and (max-width:  768px){
     display: flex;
     flex-direction: column;
@@ -115,8 +129,14 @@ export const SocialMedia768 = styled.div`
   @media screen and (min-width:  769px){
     display: none;
   }
+  @media screen and (max-width: 426px){
+    align-self: flex-end;
+  }
   
   img{
-    max-width: 50px;
+    width: 50px;
+    @media screen and (max-width: 426px){
+      width: 30px;
+    }
   }
 `

@@ -21,6 +21,9 @@ export const Container = styled.section`
     @media screen and (max-width:  768px){
       font-size: 28px;
     }
+    @media screen and (max-width: 426px){
+      font-size: 24px;
+    }
   }
 `
 
@@ -31,6 +34,9 @@ export const ContainerTop = styled.div`
 
   @media screen and (max-width:  768px){
     grid-template: auto auto auto auto / auto auto;
+  }
+  @media screen and (max-width: 426px){
+    grid-template: auto auto auto auto auto auto auto auto / auto;
   }
 
   a{
@@ -67,6 +73,10 @@ export const ContainerTop = styled.div`
     cursor: pointer;
     font-weight: 500;
 
+    @media screen and (max-width: 426px){
+      width: 90vw;
+    }
+
     img{
       width: 35px;
     }
@@ -75,4 +85,7 @@ export const ContainerTop = styled.div`
 
 export const ContainerBottom = styled.div`
   font-size: 18px;
+  @media screen and (max-width: 426px){
+    font-size: 16px;
+  }
 `

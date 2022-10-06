@@ -9,7 +9,7 @@ import LogoGitHubDarkImgURL from '../../assets/icons/logo-github-dark.png'
 import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.png'
 import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png'
 
-import { ContainerAbout, ContainerAboutBottom, CardImgsAndSocial, SocialMedia, SocialMedia768, PalavrasSection, Text } from "./styles"
+import { ContainerAbout, ContainerAboutBottom, CardImgsAndSocial, SocialMedia, SocialMedia768, PalavrasSection, Text, ImgCoffe } from "./styles"
 
 export function AboutMe() {
   const { theme } = useContext(ThemeContext)
@@ -71,7 +71,7 @@ export function AboutMe() {
           </SocialMedia>
         </div>
         <CardImgsAndSocial>
-          <img src={KeyboardAndCoffeImgURL} alt="Teclado e café" />
+          <ImgCoffe src={KeyboardAndCoffeImgURL} alt="Teclado e café" />
           <SocialMedia768>
             <a href="https://github.com/EduuBraga" target="_blank">
               {soonGitHub ? (

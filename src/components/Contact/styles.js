@@ -12,11 +12,22 @@ export const ContainerContactTop = styled.div`
     font-size: 32px;
     text-align: center;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 768px){
+      font-size: 28px;
+    } 
+    @media screen and (max-width: 426px){
+      font-size: 24px;
+    }
   }
   p{
     font-size: 18px;
     margin-bottom: 15px;
     text-align: center;
+
+    @media screen and (max-width: 426px){
+      font-size: 16px;
+    }
   }
 `
 
@@ -25,6 +36,10 @@ export const ContainerContactBottom = styled.div`
   align-items: center;
   justify-content: center;
   gap: 20px;
+  @media screen and (max-width: 426px){
+    flex-direction: column;
+    gap: 10px;
+  }
 `
 
 export const CardContainerContactBottom = styled.div`
@@ -35,6 +50,10 @@ export const CardContainerContactBottom = styled.div`
   gap: 10px;
   width: 200px;
   height: 140px;
+
+  @media screen and (max-width: 426px){
+    width: 90vw;
+  }
 
   background-color: var(--color-secondary-text);
   padding: 15px 5px;
