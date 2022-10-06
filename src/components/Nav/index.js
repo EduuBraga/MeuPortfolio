@@ -23,7 +23,7 @@ export function Nav() {
 
   return (
     <Container>
-      {menuVisible && <ContainerMenu>
+      <ContainerMenu menuItIsVisible={menuVisible}>
         <ButtonClose onClick={() => { setMenuVisible(false) }}>
           {theme.title === 'dark' ? (
             <img src={CloseImgURL} alt="Fechar menu" />
@@ -31,12 +31,14 @@ export function Nav() {
             <img src={CloseDarkImgURL} alt="Fechar menu" />
           )}
         </ButtonClose>
+
         <nav>
           <a href="#Home">Home</a>
           <a href="#AboutMe">About me</a>
           <a href="#Skills">Skills</a>
           <a href="#Contact">Contact</a>
         </nav>
+
         <div>
           <button>
             {theme.title === 'dark' ? (
@@ -46,7 +48,7 @@ export function Nav() {
             )}
           </button>
         </div>
-      </ContainerMenu>}
+      </ContainerMenu>
 
       {theme.title === 'dark' ? (
         <IconMenu onClick={() => { setMenuVisible(true) }} src={MenuImgURL} alt="Ícone do menu" />

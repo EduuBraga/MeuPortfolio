@@ -1,8 +1,8 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 export const Container = styled.nav`
   z-index: 10;
-  background-color: ${ ({ theme }) => theme.colors.colorBgBlur};
+  background-color: ${({ theme }) => theme.colors.colorBgBlur};
   backdrop-filter: blur(5px);
   position: sticky;
   top: 0;
@@ -23,7 +23,7 @@ export const Logo = styled.div`
   border-radius: 5px;
   font-weight: 800;
   font-size: 40px;
-  color: ${ ({theme}) => theme.colors.colorBgSecondary};
+  color: ${({ theme }) => theme.colors.colorBgSecondary};
   background-color: var(--color-main);
 
   @media screen and (max-width:  768px){
@@ -42,11 +42,11 @@ export const NavBar = styled.div`
   a{
     font-size: 18px;
     font-weight: 700;
-    color:${ ({theme}) => theme.colors.colorTextSecondary};
+    color:${({ theme }) => theme.colors.colorTextSecondary};
 
     :hover{
       text-decoration: underline;
-      color: ${ ({theme}) => theme.colors.colorBgSecondary};
+      color: ${({ theme }) => theme.colors.colorBgSecondary};
     }
   }
 `
@@ -79,7 +79,7 @@ export const SwitchSettings = styled.button`
 export const SwitchTheme = styled.div`
   position: absolute;
   left: -50px;
-  bottom: ${({isVisible})=> isVisible === true ? '-1px' : '60px'};
+  bottom: ${({ isVisible }) => isVisible === true ? '-1px' : '60px'};
   transition: bottom 1s ease;
 
   img{
@@ -97,29 +97,22 @@ export const SwitchTheme = styled.div`
   }
 `
 
-const ShowMenu = keyframes`
-  0%{
-    left: -220px;
-  }100%{
-    left: 0;
-  }
-`
-
+// === Menu ===
 export const ContainerMenu = styled.div`
   position: fixed;
   top: 0;
   bottom: 0;
-  left: 0;
+  left: ${({ menuItIsVisible }) => menuItIsVisible === true ? '0' : '-230px'};
   height: 100vh;
   width: 220px;
 
-  animation: ${ShowMenu} 1s ease;
-  background-color: ${ ({ theme }) => theme.colors.colorBg};
+  transition: left 1s ease;
+  background-color: ${({ theme }) => theme.colors.colorBg};
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow:${ ({ theme }) => theme.title === 'dark' ? '-5px 0px 15px #00000080 inset' : '-5px 0px 15px var(--color-tertiary) inset'};
+  box-shadow:${({ theme }) => theme.title === 'dark' ? '-5px 0px 15px #00000080 inset' : '-5px 0px 15px var(--color-tertiary) inset'};
 
   nav{
     display: flex;
@@ -131,11 +124,11 @@ export const ContainerMenu = styled.div`
     a{
       font-size: 18px;
       font-weight: 700;
-      color:${ ({theme}) => theme.colors.colorTextSecondary};
+      color:${({ theme }) => theme.colors.colorTextSecondary};
 
       :hover{
         text-decoration: underline;
-        color: ${ ({theme}) => theme.colors.colorBgSecondary};
+        color: ${({ theme }) => theme.colors.colorBgSecondary};
       }
     }
   }
