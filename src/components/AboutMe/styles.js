@@ -41,7 +41,7 @@ export const PalavrasSection = styled.div`
   position: relative;
   transform: translateY(10px);
   @media screen and (max-width: 426px){
-    transform: translateY(5px);
+    transform: translateY(6px);
   }
 
   ::after{
