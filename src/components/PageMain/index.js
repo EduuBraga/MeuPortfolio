@@ -11,6 +11,8 @@ import { Contact } from "../Contact"
 import { Footer } from "../Footer"
 import { GlobalStyle } from "../../Styles/GlobalStyles/styles"
 import MySelfImgURL from '../../assets/my-self.png'
+import MyCV from '../../assets/eduardobraga.CV.pdf'
+
 
 import { ContainerHome, ContainerHomeTop, ContainerHomeBottom } from "./styles"
 
@@ -37,7 +39,9 @@ export function PageMain() {
             <ContainerHomeBottom>
               <p>Desenvolvedor Front-End</p>
               <div>
-                <ButtonBG>Download CV</ButtonBG>
+                <a href={MyCV} download="EduardoBraga-CV" target="blank">
+                  <ButtonBG>Download CV</ButtonBG>
+                </a>
                 <a href="#Contact" >
                   <ButtonNoBG>Entre em contato</ButtonNoBG>
                 </a>
