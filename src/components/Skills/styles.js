@@ -88,4 +88,18 @@ export const ContainerBottom = styled.div`
   @media screen and (max-width: 426px){
     font-size: 16px;
   }
+
+  a{
+    text-decoration: underline;
+    text-decoration-color:var(--color-secondary) ;
+    transition: all 0.2s;
+
+    :hover {
+      background-color: #00000090;
+      color: var(--color-secondary);
+    }
+    :active, :focus{
+      color: var(--color-secondary);
+    }
+  }
 `

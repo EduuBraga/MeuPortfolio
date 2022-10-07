@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"
+import React, { createContext, useState } from "react"
 
 import { ThemeDark } from "../../Styles/Themes/dark"
 import { ThemeLight } from "../../Styles/Themes/light"
