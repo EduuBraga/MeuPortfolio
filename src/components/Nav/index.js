@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react"
 import { ThemeContext } from "../../Provider/ThemesProvider/index"
 
 import SettingsDarkImgURL from '../../assets/icons/settings-dark.png'
-import SettingsImgURL from '../../assets/icons/settings.png'
+import SettingsImgURL from './../../assets/icons/settings.png'
 import MoonImgURL from '../../assets/icons/moon.png'
 import SunImgURL from '../../assets/icons/sun.png'
 import CloseImgURL from '../../assets/icons/close.png'
