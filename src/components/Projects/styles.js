@@ -53,10 +53,14 @@ export const CardProjects = styled.div`
 
   div:nth-child(1){
     text-align: center;
-    transition: all 0.5s;
+    transition: all 0.4s ease;
+    opacity: 0.85;
+    overflow: hidden;
+    transform: scale(0.97);
 
     :hover{
-      transform: scale(1.025);
+      transform: scale(1);
+      opacity: 1;
     }
 
     img{
@@ -69,12 +73,7 @@ export const CardProjects = styled.div`
     color: white;
   }
 
-  p{
-    color: var(--color-tertiary-text);
-    font-size: 13px;
-  }
-
-  div:nth-child(4){
+  div:nth-child(3){
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
