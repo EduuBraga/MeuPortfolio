@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { ThemeContext } from "../../Provider/ThemesProvider/index"
 
 import SettingsDarkImgURL from '../../assets/icons/settings-dark.png'
@@ -13,13 +13,19 @@ import MenuDarkImgURL from '../../assets/icons/menu-dark.png'
 import { Container, Logo, NavBar, ContainerSettings, SwitchTheme, SwitchSettings, ContainerMenu, IconMenu, ButtonClose } from "./styles"
 
 export function Nav() {
-  const { theme, handleThemes } = useContext(ThemeContext)
+  const { theme, handleThemes, HandleSrcAudio, srcAudio, handleThemesMenu } = useContext(ThemeContext)
   const [themeVisible, setThemeVisible] = useState(false)
   const [menuVisible, setMenuVisible] = useState(false)
 
   function showThemes() {
     themeVisible === true ? setThemeVisible(false) : setThemeVisible(true)
+    HandleSrcAudio()
   }
+
+  useEffect(() => {
+    let audio = document.querySelector('#audio')
+    audio.play()
+  }, [srcAudio])
 
   return (
     <Container>
@@ -42,9 +48,9 @@ export function Nav() {
         <div>
           <button>
             {theme.title === 'dark' ? (
-              <img src={SunImgURL} onClick={handleThemes} alt="ícone de tema" />
+              <img src={SunImgURL} onClick={handleThemesMenu} alt="ícone de tema" />
             ) : (
-              <img src={MoonImgURL} onClick={handleThemes} alt="ícone de tema" />
+              <img src={MoonImgURL} onClick={handleThemesMenu} alt="ícone de tema" />
             )}
           </button>
         </div>
@@ -88,6 +94,9 @@ export function Nav() {
           )}
         </SwitchSettings>
       </ContainerSettings>
+
+      <audio id="audio" src={srcAudio}></audio>
+
     </Container>
   )
 }
