@@ -42,8 +42,8 @@ export function AboutMe() {
         <div>
           <p>Olá 👋</p>
           <p>Meu nome é Carlos Eduardo Ponciano Braga, tenho 18 anos, moro em Pentecoste (CE), Atualmente "atuo" como Desenvolvedor Front-End.</p>
-          <p>Adoro criar coisas, por este motivo o universo Front-End me pegou de jeito - esse danadinho. Fazer e refazer estilos é uma das coisas que eu mais gosto, pois não tenho dificuldades em da um passo atrás, pra dar dois à frente.</p>
-          <p>Desde que decide me dedicar dia após dia a programação, só tive a certeza de que sim! é isso que eu quero pra minha vida. Com isso em mente venho evoluindo minhas habilidades como desenvolvedor, sempre disposto a aprender coisas novas e buscar resoluções de problemas.</p>
+          <p>Adoro criar coisas, por este motivo a área de Front-End me encantou logo de cara. Desde então, venho me dedicando dia após dia a programação. Sempre buscando evoluir minhas habilidades como desenvolvedor e pessoal.</p>
+          <p>Fazer e refazer estilos é o que mais me agrada, pois não tenho dificuldades em da um passo atrás, pra dar dois à frente.</p>
           <SocialMedia>
             <a href="https://github.com/EduuBraga" target="_blank" rel="noreferrer">
               {soonGitHub ? (

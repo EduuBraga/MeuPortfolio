@@ -47,7 +47,7 @@ export function Footer() {
               )
             )}
           </a>
-          <a href="mailto:chocolate.blindado123@gmail.com" target="_blank" rel="noreferrer">
+          <a href="mailto:eduardo.braga467@gmail.com" target="_blank" rel="noreferrer">
             {iconEmail ? (
               <img src={EmailImgsecondaryURL} onMouseOut={() => { setIconEmail(false) }} alt="E-mail" />
             ) : (

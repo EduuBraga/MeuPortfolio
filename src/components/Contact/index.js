@@ -18,8 +18,8 @@ export function Contact(){
             <img src={EmailImgURL} alt="E-mail" />
           </div>
           <h4>E-mail</h4>
-          <p>chocolate.blindado123@gmail.com</p>
-          <a href="mailto:chocolate.blindado123@gmail.com" target="_blank" rel="noreferrer">Me mande um e-mail</a>
+          <p>eduardo.braga467@gmail.com</p>
+          <a href="mailto:eduardo.braga467@gmail.com" target="_blank" rel="noreferrer">Me mande um e-mail</a>
         </CardContainerContactBottom>
         <CardContainerContactBottom>
           <div>
