@@ -14,41 +14,53 @@ import audioOpen from '../../assets/audios/close.mp3';
 
 import { Container, Logo, NavBar, ContainerSettings, SwitchTheme, SwitchSettings, ContainerMenu, IconMenu, ButtonClose, ContentFromTabletAndMobile } from "./styles";
 
-function usePlayerState(){
+function usePlayerState() {
   const [srcAudio, setSrcAudio] = useState(audioOpen);
   const audio = useRef(null);
 
-  useEffect(()=>{
-    audio.current.play()
+  useEffect(() => {
+    let playerAudio = audio.current.play();
+
+    if (playerAudio !== undefined) {
+      playerAudio.then(_ => {
+        playerAudio()
+      })
+      .catch(error => {
+        console.log(error)
+      });
+    };
   }, [srcAudio]);
 
-  function toggleSrcAudio(){
+  function toggleSrcAudio() {
     srcAudio === audioOpen ? setSrcAudio(audioClose) : setSrcAudio(audioOpen)
   };
 
-  return{
+  return {
     srcAudio, toggleSrcAudio, audio
   };
 }
 
 export function Header() {
   const { theme, handleThemes } = useContext(ThemeContext);
-  const {toggleSrcAudio, srcAudio, audio} = usePlayerState();
+  const { toggleSrcAudio, srcAudio, audio } = usePlayerState();
+  
   const [themeVisible, setThemeVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
-  
+
   function showIconThemes() {
     themeVisible === true ? setThemeVisible(false) : setThemeVisible(true)
     toggleSrcAudio()
   };
 
-  function handleThemesAndSrcAudio(){
+  function handleThemesAndSrcAudio() {
     handleThemes()
     toggleSrcAudio()
   };
 
   return (
     <Container>
+      <audio preload="true" id="audio" ref={audio} src={srcAudio}></audio>
+
       <ContainerMenu menuItIsVisible={menuVisible}>
         <ButtonClose onClick={() => { setMenuVisible(false) }}>
           {theme.title === 'dark' ? (
@@ -117,9 +129,6 @@ export function Header() {
           )}
         </SwitchSettings>
       </ContainerSettings>
-
-      <audio id="audio" ref={audio} src={srcAudio}></audio>
-       
     </Container>
   );
 };
