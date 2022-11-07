@@ -17,6 +17,7 @@ export function PageMain() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
+      <span id="Home"></span>
 
       <main>
         <FisrtContainer />
