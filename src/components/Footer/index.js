@@ -11,13 +11,9 @@ import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.
 import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png';
 import EmailImgsecondaryURL from '../../assets/icons/mail-secondary.png';
 
-import { Container, SocialMidia, Content } from "./styles";
+import { Container, SocialMidia, Content, HandleImg } from "./styles";
 
 export function Footer() {
-  const [soonGitHub, setSoonGitHub] = useState(false);
-  const [soonLinkedin, setSoonLinkedin] = useState(false);
-  const [iconEmail, setIconEmail] = useState(false);
-
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -25,37 +21,42 @@ export function Footer() {
       <Content>
         <SocialMidia>
           <a href="https://github.com/EduuBraga">
-            {soonGitHub ? (
-              <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
+            {theme.title === 'dark' ? (
+              <HandleImg>
+                <img src={LogoGitHubImgURL} alt="Logo linkedin" />
+                <img src={LogoGitHubsecondaryImgURL} alt="Logo GitHub" />
+              </HandleImg>
             ) : (
-              theme.title === 'dark' ? (
-                <img src={LogoGitHubImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo GitHub" />
-              ) : (
-                <img src={LogoGitHubDarkImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo GitHub" />
-              )
-            )
-            }
+              <HandleImg>
+                <img src={LogoGitHubDarkImgURL} alt="Logo linkedin" />
+                <img src={LogoGitHubsecondaryImgURL} alt="Logo GitHub" />
+              </HandleImg>
+            )}
           </a>
           <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/">
-            {soonLinkedin ? (
-              <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />
+            {theme.title === 'dark' ? (
+              <HandleImg>
+                <img src={LogoLinkedinImgURL} alt="Logo linkedin" />
+                <img src={LogoLinkedinsecondaryImgURL} alt="Logo linkedin" />
+              </HandleImg>
             ) : (
-              theme.title === 'dark' ? (
-                <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
-              ) : (
-                <img src={LogoLinkedinDarkImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
-              )
+              <HandleImg>
+                <img src={LogoLinkedinDarkImgURL} alt="Logo linkedin" />
+                <img src={LogoLinkedinsecondaryImgURL} alt="Logo linkedin" />
+              </HandleImg>
             )}
           </a>
           <a href="mailto:eduardo.braga467@gmail.com">
-            {iconEmail ? (
-              <img src={EmailImgsecondaryURL} onMouseOut={() => { setIconEmail(false) }} alt="E-mail" />
+            {theme.title === 'dark' ? (
+              <HandleImg>
+                <img src={EmailImgURL} alt="E-mail" />
+                <img src={EmailImgsecondaryURL} alt="E-mail" />
+              </HandleImg>
             ) : (
-              theme.title === 'dark' ? (
-                <img src={EmailImgURL} onMouseOver={() => { setIconEmail(true) }} alt="E-mail" />
-              ) : (
-                <img src={EmailDarkImgURL} onMouseOver={() => { setIconEmail(true) }} alt="E-mail" />
-              )
+              <HandleImg>
+                <img src={EmailDarkImgURL} alt="E-mail" />
+                <img src={EmailImgsecondaryURL} alt="E-mail" />
+              </HandleImg>
             )}
           </a>
         </SocialMidia>
