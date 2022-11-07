@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from '../../Provider/ThemesProvider/index';
 
 import LogoGitHubImgURL from '../../assets/icons/logo-github.png';
