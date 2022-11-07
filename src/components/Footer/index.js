@@ -1,30 +1,30 @@
-import React, { useState, useContext } from "react"
-import { ThemeContext } from '../../Provider/ThemesProvider/index'
+import React, { useState, useContext } from "react";
+import { ThemeContext } from '../../Provider/ThemesProvider/index';
 
-import LogoGitHubImgURL from '../../assets/icons/logo-github.png'
-import LogoLinkedinImgURL from '../../assets/icons/linkedin.png'
-import EmailImgURL from '../../assets/icons/mail.png'
-import LogoGitHubDarkImgURL from '../../assets/icons/logo-github-dark.png'
-import LogoLinkedinDarkImgURL from '../../assets/icons/linkedin-dark.png'
-import EmailDarkImgURL from '../../assets/icons/mail-dark.png'
-import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.png'
-import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png'
-import EmailImgsecondaryURL from '../../assets/icons/mail-secondary.png'
+import LogoGitHubImgURL from '../../assets/icons/logo-github.png';
+import LogoLinkedinImgURL from '../../assets/icons/linkedin.png';
+import EmailImgURL from '../../assets/icons/mail.png';
+import LogoGitHubDarkImgURL from '../../assets/icons/logo-github-dark.png';
+import LogoLinkedinDarkImgURL from '../../assets/icons/linkedin-dark.png';
+import EmailDarkImgURL from '../../assets/icons/mail-dark.png';
+import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.png';
+import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png';
+import EmailImgsecondaryURL from '../../assets/icons/mail-secondary.png';
 
-import { Container, SocialMidia, Content } from "./styles"
+import { Container, SocialMidia, Content } from "./styles";
 
 export function Footer() {
-  const [soonGitHub, setSoonGitHub] = useState(false)
-  const [soonLinkedin, setSoonLinkedin] = useState(false)
-  const [iconEmail, setIconEmail] = useState(false)
+  const [soonGitHub, setSoonGitHub] = useState(false);
+  const [soonLinkedin, setSoonLinkedin] = useState(false);
+  const [iconEmail, setIconEmail] = useState(false);
 
-  const { theme } = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
 
   return (
     <Container>
       <Content>
         <SocialMidia>
-          <a href="https://github.com/EduuBraga" target="_blank" rel="noreferrer">
+          <a href="https://github.com/EduuBraga">
             {soonGitHub ? (
               <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
             ) : (
@@ -36,7 +36,7 @@ export function Footer() {
             )
             }
           </a>
-          <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/">
             {soonLinkedin ? (
               <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />
             ) : (
@@ -47,7 +47,7 @@ export function Footer() {
               )
             )}
           </a>
-          <a href="mailto:eduardo.braga467@gmail.com" target="_blank" rel="noreferrer">
+          <a href="mailto:eduardo.braga467@gmail.com">
             {iconEmail ? (
               <img src={EmailImgsecondaryURL} onMouseOut={() => { setIconEmail(false) }} alt="E-mail" />
             ) : (
@@ -65,5 +65,5 @@ export function Footer() {
         <span></span>
       </Content>
     </Container>
-  )
-}
+  );
+};

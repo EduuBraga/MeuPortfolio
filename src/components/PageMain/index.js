@@ -11,24 +11,23 @@ import { Contact } from "../Contact";
 import { Footer } from "../Footer";
 import { GlobalStyle } from "../../Styles/GlobalStyles/styles";
 
-
 export function PageMain() {
-  const {theme} = useContext(ThemeContext)
+  const { theme } = useContext(ThemeContext);
 
   return (
     <ThemeProvider theme={theme}>
-        <Header />
+      <Header />
 
-        <main>
-          <FisrtContainer />
-          <AboutMe />
-          <Skills />
-          <ProjectsCarousel />
-          <Contact />
-        </main>
+      <main>
+        <FisrtContainer />
+        <AboutMe />
+        <Skills />
+        <ProjectsCarousel />
+        <Contact />
+      </main>
 
-        <Footer />
-        <GlobalStyle />
+      <Footer />
+      <GlobalStyle />
     </ThemeProvider>
-  )
+  );
 };

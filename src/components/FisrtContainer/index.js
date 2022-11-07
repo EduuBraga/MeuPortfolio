@@ -32,5 +32,5 @@ export function FisrtContainer() {
       </ContainerHomeBottom>
       <span id="AboutMe"></span>
     </ContainerHome>
-  )
-}
+  );
+};

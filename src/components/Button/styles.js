@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const ButtonBG = styled.button`
   background-color: ${ ({ theme }) => theme.colors.colorBgSecondary};

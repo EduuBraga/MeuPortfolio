@@ -28,12 +28,12 @@ function usePlayerState(){
 
   return{
     srcAudio, toggleSrcAudio, audio
-  }
+  };
 }
 
 export function Header() {
   const { theme, handleThemes } = useContext(ThemeContext);
-  const {toggleSrcAudio, srcAudio, audio} = usePlayerState()
+  const {toggleSrcAudio, srcAudio, audio} = usePlayerState();
   const [themeVisible, setThemeVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
   
@@ -121,5 +121,5 @@ export function Header() {
       <audio id="audio" ref={audio} src={srcAudio}></audio>
 
     </Container>
-  )
+  );
 };
