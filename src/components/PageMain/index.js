@@ -6,7 +6,7 @@ import { Header } from "../Header/index";
 import { FisrtContainer } from "../FisrtContainer";
 import { AboutMe } from "../AboutMe/index";
 import { Skills } from "../Skills/index";
-import { ProjectsCarousel } from "../Projects";
+import { ProjectsCarousel } from "../ContainerProjects";
 import { Contact } from "../Contact";
 import { Footer } from "../Footer";
 import { GlobalStyle } from "../../Styles/GlobalStyles/styles";
