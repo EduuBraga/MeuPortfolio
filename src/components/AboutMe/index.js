@@ -9,13 +9,10 @@ import LogoGitHubDarkImgURL from '../../assets/icons/logo-github-dark.png';
 import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.png';
 import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png';
 
-import { ContainerAbout, ContainerAboutBottom, CardImgsAndSocial, SocialMedia, SocialMedia768, PalavrasSection, Text, ImgCoffe } from "./styles";
+import { ContainerAbout, ContainerAboutBottom, CardImgsAndSocial, SocialMedia, SocialMedia768, PalavrasSection, Text, ImgCoffe, HandleImg } from "./styles";
 
 export function AboutMe() {
   const { theme } = useContext(ThemeContext);
-
-  const [soonGitHub, setSoonGitHub] = useState(false);
-  const [soonLinkedin, setSoonLinkedin] = useState(false);
   const [palavra, setPalavra] = useState({ palavra: 'Disposto.' });
 
   const palavras = [
@@ -46,26 +43,30 @@ export function AboutMe() {
           <p>Fazer e refazer estilos é o que mais me agrada, pois não tenho dificuldades em da um passo atrás, pra dar dois à frente.</p>
           <SocialMedia>
             <a href="https://github.com/EduuBraga" >
-              {soonGitHub ? (
-                <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
+              {theme.title === 'dark' ? (
+                <HandleImg>
+                  <img src={LogoGitHubImgURL} alt="Logo linkedin" />
+                  <img src={LogoGitHubsecondaryImgURL} alt="Logo GitHub" />
+                </HandleImg>
               ) : (
-                theme.title === 'dark' ? (
-                  <img src={LogoGitHubImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
-                ) : (
-                  <img src={LogoGitHubDarkImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
-                )
+                <HandleImg>
+                  <img src={LogoGitHubDarkImgURL} alt="Logo linkedin" />
+                  <img src={LogoGitHubsecondaryImgURL} alt="Logo GitHub" />
+                </HandleImg>
               )}
             </a>
 
             <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" >
-              {soonLinkedin ? (
-                <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />
+              {theme.title === 'dark' ? (
+                <HandleImg>
+                  <img src={LogoLinkedinImgURL} alt="Logo linkedin" />
+                  <img src={LogoLinkedinsecondaryImgURL} alt="Logo linkedin" />
+                </HandleImg>
               ) : (
-                theme.title === 'dark' ? (
-                  <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
-                ) : (
-                  <img src={LogoLinkedinDarkImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" />
-                )
+                <HandleImg>
+                  <img src={LogoLinkedinDarkImgURL} alt="Logo linkedin" />
+                  <img src={LogoLinkedinsecondaryImgURL} alt="Logo linkedin" />
+                </HandleImg>
               )}
             </a>
           </SocialMedia>
@@ -74,21 +75,31 @@ export function AboutMe() {
           <ImgCoffe src={KeyboardAndCoffeImgURL} alt="Teclado e café" />
           <SocialMedia768>
             <a href="https://github.com/EduuBraga" >
-              {soonGitHub ? (
-                <img src={LogoGitHubsecondaryImgURL} onMouseOut={() => { setSoonGitHub(false) }} alt="Logo GitHub" />
+              {theme.title === 'dark' ? (
+                <HandleImg>
+                  <img src={LogoGitHubImgURL} alt="Logo linkedin" />
+                  <img src={LogoGitHubsecondaryImgURL} alt="Logo GitHub" />
+                </HandleImg>
               ) : (
-                theme.title ==='dark' ? (
-                  <img src={LogoGitHubImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
-                ) : (
-                  <img src={LogoGitHubDarkImgURL} onMouseOver={() => { setSoonGitHub(true) }} alt="Logo linkedin" />
-                )
+                <HandleImg>
+                  <img src={LogoGitHubDarkImgURL} alt="Logo linkedin" />
+                  <img src={LogoGitHubsecondaryImgURL} alt="Logo GitHub" />
+                </HandleImg>
               )}
             </a>
 
             <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/" >
-              {soonLinkedin ? ( <img src={LogoLinkedinsecondaryImgURL} onMouseOut={() => { setSoonLinkedin(false) }} alt="Logo linkedin" />) 
-              : ( theme.title === 'dark' ? ( <img src={LogoLinkedinImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" /> ) 
-              : ( <img src={LogoLinkedinDarkImgURL} onMouseOver={() => { setSoonLinkedin(true) }} alt="Logo linkedin" /> ))}
+              {theme.title === 'dark' ? (
+                <HandleImg>
+                  <img src={LogoLinkedinImgURL} alt="Logo linkedin" />
+                  <img src={LogoLinkedinsecondaryImgURL} alt="Logo linkedin" />
+                </HandleImg>
+              ) : (
+                <HandleImg>
+                  <img src={LogoLinkedinDarkImgURL} alt="Logo linkedin" />
+                  <img src={LogoLinkedinsecondaryImgURL} alt="Logo linkedin" />
+                </HandleImg>
+              )}
             </a>
           </SocialMedia768>
         </CardImgsAndSocial>
