@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Container = styled.nav`
+export const Container = styled.header`
   z-index: 10;
   background-color: ${({ theme }) => theme.colors.colorBgBlur};
   backdrop-filter: blur(5px);
@@ -151,16 +151,6 @@ export const ContainerMenu = styled.div`
   }
 `
 
-export const IconMenu = styled.img`
-  width: 30px;
-  margin: 10px;
-  cursor: pointer;
-
-  @media screen and (min-width:  769px){
-    display: none;
-  }
-`
-
 export const ButtonClose = styled.button`
   position: absolute;
   right: 8px;
@@ -175,5 +165,38 @@ export const ButtonClose = styled.button`
 
   img{
     width: 20px;
+  }
+`
+
+export const IconMenu = styled.img`
+  width: 30px;
+  margin: 10px;
+  cursor: pointer;
+`
+
+export const ContentFromTabletAndMobile = styled.div`
+  @media screen and (min-width:  769px){
+    display: none;
+  }
+
+  div{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: bottom 1s ease;
+
+    img{
+      width: 30px;
+    }
+
+    button{
+      cursor: pointer;
+      background-color: #00000000;
+      border: none;
+
+      :active{
+        transform: scale(0.90);
+      }
+    }
   }
 `
