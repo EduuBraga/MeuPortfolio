@@ -1,13 +1,13 @@
 import React from "react";
 
-import LogoHTMLImgUrl from '../../assets/icons/logo-html5-icon.png';
-import LogoCSSImgUrl from '../../assets/icons/logo-css3-icon.png';
-import LogoJavascriptImgUrl from '../../assets/icons/logo-javascript-icon.png';
-import LogoFigmaImgUrl from '../../assets/icons/logo-figma-icon.png';
-import LogoReactImgUrl from '../../assets/icons/logo-react-icon.png';
-import LogoGitImgUrl from '../../assets/icons/logo-git-icon.png';
-import LogoBootstrapImgUrl from '../../assets/icons/logo-bootstrap-icon.png';
-import LogoVsCodeImgUrl from '../../assets/icons/logo-vscode-icon.png';
+import LogoHTMLImgUrl from '../../icons/logo-html5-icon.png';
+import LogoCSSImgUrl from '../../icons/logo-css3-icon.png';
+import LogoJavascriptImgUrl from '../../icons/logo-javascript-icon.png';
+import LogoFigmaImgUrl from '../../icons/logo-figma-icon.png';
+import LogoReactImgUrl from '../../icons/logo-react-icon.png';
+import LogoGitImgUrl from '../../icons/logo-git-icon.png';
+import LogoBootstrapImgUrl from '../../icons/logo-bootstrap-icon.png';
+import LogoVsCodeImgUrl from '../../icons/logo-vscode-icon.png';
 
 import { Container, ContainerTop, ContainerBottom } from "./styles";
 

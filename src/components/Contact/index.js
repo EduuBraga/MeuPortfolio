@@ -1,7 +1,7 @@
 import React from "react";
 
-import LogoLinkedinImgURL from '../../assets/icons/linkedin.png';
-import EmailImgURL from '../../assets/icons/mail.png';
+import LogoLinkedinImgURL from '../../icons/linkedin.png';
+import EmailImgURL from '../../icons/mail.png';
 
 import { Container, ContainerContactTop, ContainerContactBottom, CardContainerContactBottom } from "./styles";
 

@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from '../../Provider/ThemesProvider/index';
 
 import KeyboardAndCoffeImgURL from '../../assets/keyboardandcoffe.jpg';
-import LogoLinkedinImgURL from '../../assets/icons/linkedin.png';
-import LogoGitHubImgURL from '../../assets/icons/logo-github.png';
-import LogoLinkedinDarkImgURL from '../../assets/icons/linkedin-dark.png';
-import LogoGitHubDarkImgURL from '../../assets/icons/logo-github-dark.png';
-import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.png';
-import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png';
+import LogoLinkedinImgURL from '../../icons/linkedin.png';
+import LogoGitHubImgURL from '../../icons/logo-github.png';
+import LogoLinkedinDarkImgURL from '../../icons/linkedin-dark.png';
+import LogoGitHubDarkImgURL from '../../icons/logo-github-dark.png';
+import LogoGitHubsecondaryImgURL from '../../icons/logo-github-secondary.png';
+import LogoLinkedinsecondaryImgURL from '../../icons/linkedin-secondary.png';
 
 import { ContainerAbout, ContainerAboutBottom, CardImgsAndSocial, SocialMedia, SocialMedia768, PalavrasSection, Text, ImgCoffe, HandleImg } from "./styles";
 

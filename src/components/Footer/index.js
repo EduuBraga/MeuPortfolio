@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import { ThemeContext } from '../../Provider/ThemesProvider/index';
 
-import LogoGitHubImgURL from '../../assets/icons/logo-github.png';
-import LogoLinkedinImgURL from '../../assets/icons/linkedin.png';
-import EmailImgURL from '../../assets/icons/mail.png';
-import LogoGitHubDarkImgURL from '../../assets/icons/logo-github-dark.png';
-import LogoLinkedinDarkImgURL from '../../assets/icons/linkedin-dark.png';
-import EmailDarkImgURL from '../../assets/icons/mail-dark.png';
-import LogoGitHubsecondaryImgURL from '../../assets/icons/logo-github-secondary.png';
-import LogoLinkedinsecondaryImgURL from '../../assets/icons/linkedin-secondary.png';
-import EmailImgsecondaryURL from '../../assets/icons/mail-secondary.png';
+import LogoGitHubImgURL from '../../icons/logo-github.png';
+import LogoLinkedinImgURL from '../../icons/linkedin.png';
+import EmailImgURL from '../../icons/mail.png';
+import LogoGitHubDarkImgURL from '../../icons/logo-github-dark.png';
+import LogoLinkedinDarkImgURL from '../../icons/linkedin-dark.png';
+import EmailDarkImgURL from '../../icons/mail-dark.png';
+import LogoGitHubsecondaryImgURL from '../../icons/logo-github-secondary.png';
+import LogoLinkedinsecondaryImgURL from '../../icons/linkedin-secondary.png';
+import EmailImgsecondaryURL from '../../icons/mail-secondary.png';
 
 import { Container, SocialMidia, Content, HandleImg } from "./styles";
 
