@@ -59,7 +59,7 @@ export function Header() {
 
   return (
     <Container>
-      <audio preload="true" id="audio" ref={audio} src={srcAudio}></audio>
+      <audio preload="auto" ref={audio} src={srcAudio} />
 
       <ContainerMenu menuItIsVisible={menuVisible}>
         <ButtonClose onClick={() => { setMenuVisible(false) }}>
