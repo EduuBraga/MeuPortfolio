@@ -1,14 +1,15 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
 import { ThemeContext } from "../../Provider/ThemesProvider/index";
 
-import SettingsDarkImgURL from '../../assets/icons/settings-dark.png';
-import SettingsImgURL from './../../assets/icons/settings.png';
-import MoonImgURL from '../../assets/icons/moon.png';
-import SunImgURL from '../../assets/icons/sun.png';
-import CloseImgURL from '../../assets/icons/close.png';
-import CloseDarkImgURL from '../../assets/icons/close-dark.png';
-import MenuImgURL from '../../assets/icons/menu.png';
-import MenuDarkImgURL from '../../assets/icons/menu-dark.png';
+import SettingsDarkImgURL from '../../../public/icons/settings-dark.png';
+import SettingsDarkImgURL from '../../../public/icons/settings-dark.png';
+import SettingsImgURL from './../../../public/icons/settings.png';
+import MoonImgURL from '../../../public/icons/moon.png';
+import SunImgURL from '../../../public/icons/sun.png';
+import CloseImgURL from '../../../public/icons/close.png';
+import CloseDarkImgURL from '../../../public/icons/close-dark.png';
+import MenuImgURL from '../../../public/icons/menu.png';
+import MenuDarkImgURL from '../../../public/icons/menu-dark.png';
 import audioClose from '../../assets/audios/open.mp3';
 import audioOpen from '../../assets/audios/close.mp3';
 
