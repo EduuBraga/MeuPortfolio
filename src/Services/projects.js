@@ -8,6 +8,7 @@ import TodoListImgURl from '../assets/ImgsProjects/projeto-todolist.jpg';
 import ColdTechImgURl from '../assets/ImgsProjects/projeto-coldtech.jpg';
 import ControleDeFinancasImgURl from '../assets/ImgsProjects/controle_de_financas.jpg';
 import PhotoSnapImgURl from '../assets/ImgsProjects/photosnap.jpg';
+import PomodoroImgURl from '../assets/ImgsProjects/pomodoro.jpg';
 
 export const projectsFiles = [
   {
@@ -33,6 +34,12 @@ export const projectsFiles = [
     deploy: 'https://photosnap-platform.vercel.app/',
     img: PhotoSnapImgURl,
     repo: 'https://github.com/EduuBraga/Photosnap'
+  },
+  {
+    name: 'Pomodoro APP',
+    deploy: 'https://pomodoro-study.vercel.app/',
+    img: PomodoroImgURl,
+    repo: 'https://github.com/EduuBraga/PomodoroAPP'
   },
   {
     name: 'Jogo da Memória',
