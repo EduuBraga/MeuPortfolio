@@ -10,6 +10,7 @@ import ControleDeFinancasImgURl from '../assets/ImgsProjects/controle_de_financa
 import PhotoSnapImgURl from '../assets/ImgsProjects/photosnap.jpg';
 import PomodoroImgURl from '../assets/ImgsProjects/pomodoro.jpg';
 import todoList from '../assets/ImgsProjects/todo-list.jpg';
+import donwloadThumbnails from '../assets/ImgsProjects/donwload-thumbnails-yt.jpg';
 
 export const projectsFiles = [
   {
@@ -49,6 +50,12 @@ export const projectsFiles = [
     repo: 'https://github.com/EduuBraga/todo-list'
   },
   {
+    name: 'Download Thumbnails YouTube',
+    deploy: 'https://download-thumbnail-yt.netlify.app/',
+    img: donwloadThumbnails,
+    repo: 'https://github.com/EduuBraga/downloadThumbnailsYT'
+  },
+  {
     name: 'Jogo da Memória',
     deploy: 'https://react-jogo-da-memoria.vercel.app/',
     img: JogoDaMemoriaImgURl,
@@ -78,10 +85,4 @@ export const projectsFiles = [
     img: OnepieceImgURl,
     repo: 'https://github.com/EduuBraga/OnePiece-Personagens'
   },
-  {
-    name: 'To-do List',
-    deploy: 'https://to-do-list-eduubraga.netlify.app/',
-    img: TodoListImgURl,
-    repo: 'https://github.com/EduuBraga/todoListReact'
-  }
 ];
