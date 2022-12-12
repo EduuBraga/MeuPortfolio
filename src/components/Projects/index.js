@@ -12,8 +12,7 @@ import {
 } from "./style";
 
 export function Projects() {
-  const numberProject = index =>
-    index + 1 < 10 ? `0${index + 1}` : `${index + 1}`;
+  const numberProject = index => index + 1 < 10 ? `0${index + 1}` : index + 1;
 
   return (
     <>
