@@ -3,23 +3,37 @@ import React from "react";
 import { projectsFiles } from "../../Services/projects";
 import { ButtonBG } from "../Button/styles";
 
-import { CardProjects } from "./style";
+import {
+  CardProjects,
+  ContainerTopCard,
+  TechsProject,
+  ContainerBottomCard,
+  NumberToProject
+} from "./style";
 
 export function Projects() {
+  const numberProject = index =>
+    index + 1 < 10 ? `0${index + 1}` : `${index + 1}`;
+
   return (
     <>
       {projectsFiles.map((project, index) =>
         <CardProjects key={index}>
-          <div>
-            <a href={project.deploy} ><img src={project.img} alt="Imagem do projeto" /></a>
-          </div>
+          <ContainerTopCard>
+            <a href={project.deploy} >
+              <img src={project.img} alt="Imagem do projeto" />
+            </a>
+          </ContainerTopCard>
+
           <h3>{project.name}</h3>
-          <div>
-            <span>{index + 1 < 10 ? (`0${index + 1}`) : (`${index + 1}`)}</span>
+          <TechsProject>{project.techs}</TechsProject>
+
+          <ContainerBottomCard>
+            <NumberToProject>{numberProject(index)}</NumberToProject>
             <a href={project.repo} ><ButtonBG>Repositório</ButtonBG></a>
-          </div>
+          </ContainerBottomCard>
         </CardProjects>
       )}
     </>
-  )
+  );
 }
