@@ -31,6 +31,12 @@ export const ContainerHomeTop = styled.div`
     gap: 0px;
   }
 
+  div:nth-child(1){
+    img{
+      border-radius: 50%;
+    }
+  }
+
   div:nth-child(2){
     display: flex;
     flex-direction: column;

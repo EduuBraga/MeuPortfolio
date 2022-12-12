@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ButtonBG, ButtonNoBG } from "../Button/styles";
-import MySelfImgURL from '../../assets/my-self.png';
+import MySelfImgURL from '../../assets/i.png';
 import MyCV from '../../assets/eduardobraga.CV.pdf';
 
 import { ContainerHome, ContainerHomeTop, ContainerHomeBottom } from "./style";
