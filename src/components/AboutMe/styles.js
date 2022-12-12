@@ -1,5 +1,21 @@
 import styled, { keyframes } from "styled-components"
 
+const OpacityPalavra = keyframes`
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+`
+
+const RevealBlock = keyframes`
+  0%{
+    transform: translateX(0%);
+  }100%{
+    transform: translateX(100%);
+  }
+`
+
 export const ContainerAbout = styled.section`
   margin: 0 auto;
   max-width: 765px;
@@ -19,23 +35,7 @@ export const ContainerAbout = styled.section`
   }
 `
 
-const OpacityPalavra = keyframes`
-  0%{
-    opacity: 0;
-  }100%{
-    opacity: 1;
-  }
-`
-
-const RevealBlock = keyframes`
-  0%{
-    transform: translateX(0%);
-  }100%{
-    transform: translateX(100%);
-  }
-`
-
-export const PalavrasSection = styled.div`
+export const WorksSection = styled.div`
   display: inline-block;
   overflow: hidden;
   position: relative;
@@ -57,7 +57,7 @@ export const PalavrasSection = styled.div`
   }
 `
 
-export const Text = styled.span`
+export const TextAnimation = styled.span`
   position: relative;
   opacity: 0;
   animation: ${OpacityPalavra} 4s infinite;

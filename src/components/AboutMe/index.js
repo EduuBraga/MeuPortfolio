@@ -9,32 +9,46 @@ import LogoGitHubDarkImgURL from '../../icons/logo-github-dark.png';
 import LogoGitHubsecondaryImgURL from '../../icons/logo-github-secondary.png';
 import LogoLinkedinsecondaryImgURL from '../../icons/linkedin-secondary.png';
 
-import { ContainerAbout, ContainerAboutBottom, CardImgsAndSocial, SocialMedia, SocialMedia768, PalavrasSection, Text, ImgCoffe, HandleImg } from "./styles";
+import {
+  ContainerAbout,
+  ContainerAboutBottom,
+  CardImgsAndSocial,
+  SocialMedia,
+  SocialMedia768,
+  WorksSection,
+  TextAnimation,
+  ImgCoffe,
+  HandleImg
+} from "./styles";
 
-export function AboutMe() {
+export const AboutMe = () => {
   const { theme } = useContext(ThemeContext);
-  const [palavra, setPalavra] = useState({ palavra: 'Disposto.' });
 
-  const palavras = [
-    'disposto.',
-    'otimista.',
-    'criativo.',
-    'dedicado.',
-  ];
+  const [workAnimation, setWorkAnimation] = useState('Disposto.');
+  const [indexWorkCurrent, setIndexWorkCurrent] = useState(1);
+
+  const works = ['disposto.', 'otimista.', 'criativo.', 'dedicado.',];
 
   useEffect(() => {
-    let indexPalavras = 1
-    setInterval(() => {
-      setPalavra({ palavra: palavras[indexPalavras] })
-      if (++indexPalavras === palavras.length) {
-        indexPalavras = 0
+    setTimeout(() => {
+      setIndexWorkCurrent(prev => prev + 1);
+
+      if (indexWorkCurrent >= 4) {
+        setIndexWorkCurrent(0);
       }
+
+      setWorkAnimation(works[indexWorkCurrent]);
     }, 4000);
-  }, []);
+  }, [indexWorkCurrent]);
 
   return (
     <ContainerAbout>
-      <h1>Eduardo é um desenvolvedor <PalavrasSection><Text>{palavra.palavra}</Text></PalavrasSection></h1>
+      <h1>
+        Eduardo é um desenvolvedor <WorksSection>
+          <TextAnimation> {workAnimation}</TextAnimation>
+        </WorksSection>
+      </h1>
+
       <ContainerAboutBottom>
         <div>
           <p>Olá <span role="img" aria-label="Emoji acenando">👋</span></p>
@@ -107,4 +121,4 @@ export function AboutMe() {
       <span id="Skills"></span>
     </ContainerAbout>
   );
-};
+}
