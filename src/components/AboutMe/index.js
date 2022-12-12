@@ -52,9 +52,9 @@ export const AboutMe = () => {
       <ContainerAboutBottom>
         <div>
           <p>Olá <span role="img" aria-label="Emoji acenando">👋</span></p>
-          <p>Meu nome é Carlos Eduardo Ponciano Braga, tenho 18 anos, moro em Pentecoste (CE), Atualmente "atuo" como Desenvolvedor Front-End.</p>
-          <p>Adoro criar coisas, por este motivo a área de Front-End me encantou logo de cara. Desde então, venho me dedicando dia após dia a programação. Sempre buscando evoluir minhas habilidades como desenvolvedor e pessoal.</p>
-          <p>Fazer e refazer estilos é o que mais me agrada, pois não tenho dificuldades em da um passo atrás, pra dar dois à frente.</p>
+          <p>Meu nome é Eduardo Braga, tenho 19 anos e moro em Pentecoste (CE). Atualmente atuo como Desenvolvedor Front-End.</p>
+          <p>Sou um rapaz simples e dedicado. Acabei me apaixonando por programação, desde então venho me empenhando dia após dia aos estudos sobre a mesma. Sempre disposto a aprender coisas novas e buscar resoluções de problemas. Buscando constantemente evoluir como desenvolvedor e pessoa.</p>
+          <p>Sigo a conduta de que "Primeiro você faz, depois você melhora". Pois assim, consigo criar coisas incríveis e depois melhorá-las.</p>
           <SocialMedia>
             <a href="https://github.com/EduuBraga" >
               {theme.title === 'dark' ? (
