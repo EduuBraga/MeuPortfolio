@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { ThemeContext } from '../../Provider/ThemesProvider/index';
 
+import { ImgToggleColor } from '../ImgToggleColor/index.js'
+
 import LogoGitHubImgURL from '../../icons/logo-github.png';
 import LogoLinkedinImgURL from '../../icons/linkedin.png';
 import EmailImgURL from '../../icons/mail.png';
@@ -11,54 +13,36 @@ import LogoGitHubsecondaryImgURL from '../../icons/logo-github-secondary.png';
 import LogoLinkedinsecondaryImgURL from '../../icons/linkedin-secondary.png';
 import EmailImgsecondaryURL from '../../icons/mail-secondary.png';
 
-import { Container, SocialMidia, Content, HandleImg } from "./styles";
+import { Container, SocialMidia, Content } from "./styles";
 
 export function Footer() {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <Container>
       <Content>
         <SocialMidia>
-          <a href="https://github.com/EduuBraga">
-            {theme.title === 'dark' ? (
-              <HandleImg>
-                <img src={LogoGitHubImgURL} alt="Logo linkedin" />
-                <img src={LogoGitHubsecondaryImgURL} alt="Logo GitHub" />
-              </HandleImg>
-            ) : (
-              <HandleImg>
-                <img src={LogoGitHubDarkImgURL} alt="Logo linkedin" />
-                <img src={LogoGitHubsecondaryImgURL} alt="Logo GitHub" />
-              </HandleImg>
-            )}
-          </a>
-          <a href="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/">
-            {theme.title === 'dark' ? (
-              <HandleImg>
-                <img src={LogoLinkedinImgURL} alt="Logo linkedin" />
-                <img src={LogoLinkedinsecondaryImgURL} alt="Logo linkedin" />
-              </HandleImg>
-            ) : (
-              <HandleImg>
-                <img src={LogoLinkedinDarkImgURL} alt="Logo linkedin" />
-                <img src={LogoLinkedinsecondaryImgURL} alt="Logo linkedin" />
-              </HandleImg>
-            )}
-          </a>
-          <a href="mailto:eduardo.braga467@gmail.com">
-            {theme.title === 'dark' ? (
-              <HandleImg>
-                <img src={EmailImgURL} alt="E-mail" />
-                <img src={EmailImgsecondaryURL} alt="E-mail" />
-              </HandleImg>
-            ) : (
-              <HandleImg>
-                <img src={EmailDarkImgURL} alt="E-mail" />
-                <img src={EmailImgsecondaryURL} alt="E-mail" />
-              </HandleImg>
-            )}
-          </a>
+          <ImgToggleColor
+            link="https://github.com/EduuBraga"
+            imgWhite={LogoGitHubImgURL}
+            imgDark={LogoGitHubDarkImgURL}
+            imgHover={LogoGitHubsecondaryImgURL}
+            alt="Logo GitHub"
+          />
+
+          <ImgToggleColor
+            link="https://www.linkedin.com/in/eduardo-braga-aa0aa922b/"
+            imgWhite={LogoLinkedinImgURL}
+            imgDark={LogoLinkedinDarkImgURL}
+            imgHover={LogoLinkedinsecondaryImgURL}
+            alt="Logo LinkedIn"
+          />
+
+          <ImgToggleColor
+            link="mailto:eduardo.braga467@gmail.com"
+            imgWhite={EmailImgURL}
+            imgDark={EmailDarkImgURL}
+            imgHover={EmailImgsecondaryURL}
+            alt="E-mail"
+          />
         </SocialMidia>
 
         <span>|</span>

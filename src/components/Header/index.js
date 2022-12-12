@@ -12,7 +12,18 @@ import MenuDarkImgURL from '../../icons/menu-dark.png';
 import audioClose from '../../assets/audios/open.mp3';
 import audioOpen from '../../assets/audios/close.mp3';
 
-import { Container, Logo, NavBar, ContainerSettings, SwitchTheme, SwitchSettings, ContainerMenu, IconMenu, ButtonClose, ContentFromTabletAndMobile } from "./styles";
+import {
+  Container,
+  Logo,
+  NavBar,
+  ContainerSettings,
+  SwitchTheme,
+  SwitchSettings,
+  ContainerMenu,
+  IconMenu,
+  ButtonClose,
+  ContentFromTabletAndMobile
+} from "./styles";
 
 function usePlayerState() {
   const [srcAudio, setSrcAudio] = useState(audioOpen);
@@ -25,9 +36,9 @@ function usePlayerState() {
       playerAudio.then(_ => {
         playerAudio()
       })
-      .catch(error => {
-        console.log(error)
-      });
+        .catch(error => {
+          console.log(error)
+        });
     };
   }, [srcAudio]);
 
@@ -43,7 +54,7 @@ function usePlayerState() {
 export function Header() {
   const { theme, handleThemes } = useContext(ThemeContext);
   const { toggleSrcAudio, srcAudio, audio } = usePlayerState();
-  
+
   const [themeVisible, setThemeVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -81,17 +92,33 @@ export function Header() {
 
       <ContentFromTabletAndMobile>
         {theme.title === 'dark' ? (
-          <IconMenu onClick={() => { setMenuVisible(true) }} src={MenuImgURL} alt="Ícone do menu" />
+          <IconMenu
+            onClick={() => { setMenuVisible(true) }}
+            src={MenuImgURL}
+            alt="Ícone do menu"
+          />
         ) : (
-          <IconMenu onClick={() => { setMenuVisible(true) }} src={MenuDarkImgURL} alt="Ícone do menu" />
+          <IconMenu
+            onClick={() => { setMenuVisible(true) }}
+            src={MenuDarkImgURL}
+            alt="Ícone do menu"
+          />
         )}
 
         <div>
           <button>
             {theme.title === 'dark' ? (
-              <img src={SunImgURL} onClick={handleThemesAndSrcAudio} alt="ícone de tema" />
+              <img
+                src={SunImgURL}
+                onClick={handleThemesAndSrcAudio}
+                alt="ícone de tema"
+              />
             ) : (
-              <img src={MoonImgURL} onClick={handleThemesAndSrcAudio} alt="ícone de tema" />
+              <img
+                src={MoonImgURL}
+                onClick={handleThemesAndSrcAudio}
+                alt="ícone de tema"
+              />
             )}
           </button>
         </div>
@@ -114,18 +141,34 @@ export function Header() {
         <SwitchTheme isVisible={themeVisible}>
           <button>
             {theme.title === 'dark' ? (
-              <img src={SunImgURL} onClick={handleThemesAndSrcAudio} alt="ícone de tema" />
+              <img
+                src={SunImgURL}
+                onClick={handleThemesAndSrcAudio}
+                alt="ícone de tema"
+              />
             ) : (
-              <img src={MoonImgURL} onClick={handleThemesAndSrcAudio} alt="ícone de tema" />
+              <img
+                src={MoonImgURL}
+                onClick={handleThemesAndSrcAudio}
+                alt="ícone de tema"
+              />
             )}
           </button>
         </SwitchTheme>
 
         <SwitchSettings>
           {theme.title === 'dark' ? (
-            <img src={SettingsImgURL} onClick={showIconThemes} alt="Configurações do site" />
+            <img
+              src={SettingsImgURL}
+              onClick={showIconThemes}
+              alt="Configurações do site"
+            />
           ) : (
-            <img src={SettingsDarkImgURL} onClick={showIconThemes} alt="Configurações do site" />
+            <img
+              src={SettingsDarkImgURL} 
+              onClick={showIconThemes}
+              alt="Configurações do site"
+            />
           )}
         </SwitchSettings>
       </ContainerSettings>
