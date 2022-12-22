@@ -18,11 +18,11 @@ export function Projects() {
     <>
       {projectsFiles.map((project, index) =>
         <CardProjects key={index}>
-          <ContainerTopCard>
-            <a href={project.deploy} >
+          <a href={project.deploy} >
+            <ContainerTopCard>
               <img src={project.img} alt="Imagem do projeto" />
-            </a>
-          </ContainerTopCard>
+            </ContainerTopCard>
+          </a>
 
           <h3>{project.name}</h3>
           <TechsProject>{project.techs}</TechsProject>
